@@ -1,0 +1,5 @@
+﻿stageIndex,stagename,stageDescription,left,right,up,down
+0,A,ABC,0,1,0,0
+1,B,DEF,0,3,2,1
+2,C,GHI,2,2,2,1
+3,D,JKL,1,3,3,3
