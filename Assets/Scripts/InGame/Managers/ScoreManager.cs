@@ -14,7 +14,7 @@ namespace InGame.Managers
         public bool scoreCount = true;
         private bool clear = false;
         private int _score;
-        private int _health = 100;
+        private int _health;
         private float _stageTime;
         [SerializeField] private InGameUIView inGameUIView;
 
@@ -50,13 +50,17 @@ namespace InGame.Managers
                 if (Mathf.Approximately(_stageTime, value)) return;
             
                 _stageTime = value;
-                inGameUIView.stageTime = value;
             }
         }
 
         public void Awake()
         {
             Instance = this;
+        }
+
+        private void Start()
+        {
+            health = 100;
         }
 
         private void Update()

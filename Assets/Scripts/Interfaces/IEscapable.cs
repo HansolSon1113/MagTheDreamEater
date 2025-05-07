@@ -6,10 +6,12 @@ namespace Interfaces
     {
         public InputAction escapeAction { get; set; }
 
-        void Start();
+        void Awake();
     
         void OnDestroy();
     
         void OnEscapePerformed(InputAction.CallbackContext ctx);
+
+        void Escape();
     }
 }

@@ -29,7 +29,7 @@ namespace InGame.Notes
 
         private InputEvent lastEvent;
 
-        private void Start()
+        private void Awake()
         {
             scoreManager = ScoreManager.Instance;
 
@@ -48,7 +48,10 @@ namespace InGame.Notes
 
             eatAction.performed += onEatPerformed;
             throwAction.performed += onThrowPerformed;
+        }
 
+        private void Start()
+        {
             isColliding = false;
         }
 

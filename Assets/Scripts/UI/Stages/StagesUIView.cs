@@ -1,14 +1,42 @@
+using System.Collections.Generic;
 using DG.Tweening;
+using Interfaces;
 using TMPro;
 using UnityEngine;
 
 namespace UI.Stages
 {
-    public class StagesUIView : MonoBehaviour
+    public enum StageMenu
+    {
+        Start, Back
+    }
+
+    public interface IStageMenuContainer
+    {
+        StageMenu stageMenu { get; set; }
+    }
+    
+    public class StagesUIView : MonoBehaviour, IStageMenuContainer, IShowContainer
     {
         [SerializeField] private RectTransform panel;
-        [SerializeField] private TMP_Text indexText, nameText, descriptionText, latestScoreText, highestScoreText, latestTimeText, fastestTimeText;
-
+        [SerializeField] private TMP_Text indexText, nameText, descriptionText, latestScoreText, highestScoreText;
+        [SerializeField] private Transform camera, player;
+        [SerializeField] private List<GameObject> btnOverlay;
+        public static StagesUIView Instance;
+        private StageMenu _stageBtn = StageMenu.Back;
+        public StageMenu stageMenu
+        {
+            get => _stageBtn;
+            set
+            {
+                _stageBtn = value;
+                
+                btnOverlay[0].SetActive(false);
+                btnOverlay[1].SetActive(false);
+                btnOverlay[(int)_stageBtn].SetActive(true);
+            }
+        }
+        
         public int index
         {
             set => indexText.text = "Stage " + (value + 1);
@@ -34,24 +62,21 @@ namespace UI.Stages
             set => highestScoreText.text = value.ToString();
         }
 
-        public float latestTime
+        private void Awake()
         {
-            set => latestTimeText.text = value.ToString();
+            Instance = this;
         }
-
-        public float fastestTime
-        {
-            set => fastestTimeText.text = value.ToString();
-        }
-
+        
         public void Show()
         {
             panel.DOAnchorPosX(0, 1f);
+            camera.DOMove(new Vector3(player.position.x + 4, player.position.y, -10), 1f);
         }
 
         public void UnShow()
         {
             panel.DOAnchorPosX(1000, 1f);
+            camera.DOMove(new Vector3(player.position.x, player.position.y, -10), 1f);
         }
     }
 }

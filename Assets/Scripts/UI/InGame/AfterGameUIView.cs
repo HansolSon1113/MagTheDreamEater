@@ -6,20 +6,31 @@ namespace UI.InGame
 {
     public class AfterGameUIView : MonoBehaviour
     {
-        [SerializeField] private TMP_Text indexText, nameText, descriptionText, latestScoreText, highestScoreText, latestTimeText, fastestTimeText;
-        private ISaveData gameData = GameDataContainer.gameData;
+        [SerializeField] private TMP_Text indexText, nameText, descriptionText, latestScoreText, highestScoreText;
         
-        private void Start()
+        public int index
         {
-            var data = gameData.gameDataElements;
-            var info = GameDataContainer.currentStage;
-            indexText.text = "Stage " + (data.currentStage + 1);
-            nameText.text = info.stageName;
-            descriptionText.text = info.stageDescription;
-            latestScoreText.text = data.latestScores[data.currentStage].ToString();
-            highestScoreText.text = data.highestScores[data.currentStage].ToString();
-            latestTimeText.text = data.latestTimes[data.currentStage].ToString();
-            fastestTimeText.text = data.fastestTimes[data.currentStage].ToString();
+            set => indexText.text = "Stage " + (value + 1);
+        }
+
+        public string name
+        {
+            set => nameText.text = value;
+        }
+
+        public string description
+        {
+            set => descriptionText.text = value;
+        }
+
+        public int latestScore
+        {
+            set => latestScoreText.text = value.ToString();
+        }
+
+        public int highestScore
+        {
+            set => highestScoreText.text = value.ToString();
         }
     }
 }

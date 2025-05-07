@@ -172,6 +172,17 @@
                 },
                 {
                     "name": "",
+                    "id": "3382c3c9-27a1-4571-a8e9-8c62de8bbe87",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "293f5de1-5a31-4565-862a-b9801b2ceb2b",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -226,6 +237,34 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "AfterGame",
+            "id": "fcace40c-3471-4ae5-8295-32eee4906f7a",
+            "actions": [
+                {
+                    "name": "Continue",
+                    "type": "Button",
+                    "id": "2ef66c9b-acea-4a53-9238-75418721ce8b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62138bba-2aea-4db6-beba-b0c29fdd4afa",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Continue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

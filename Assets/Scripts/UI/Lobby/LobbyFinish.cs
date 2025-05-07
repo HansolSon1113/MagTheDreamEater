@@ -13,8 +13,13 @@ namespace UI.Lobby
         Settings,
         Exit
     }
+
+    public interface IMenuSubmittable
+    {
+        void Submit(Menu menu);
+    }
     
-    public class LobbyFinish: MonoBehaviour
+    public class LobbyFinish: MonoBehaviour, IMenuSubmittable
     {
         public static LobbyFinish Instance;
         private const int STAGE_COUNT = 4;

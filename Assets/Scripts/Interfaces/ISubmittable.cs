@@ -6,10 +6,12 @@ namespace Interfaces
     {
         public InputAction submitAction { get; set; }
     
-        void Start();
+        void Awake();
     
         void OnDestroy();
 
         void OnSubmitPerformed(InputAction.CallbackContext ctx);
+
+        void Submit();
     }
 }

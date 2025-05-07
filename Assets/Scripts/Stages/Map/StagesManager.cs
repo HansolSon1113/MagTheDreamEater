@@ -22,14 +22,12 @@ namespace Stages.Map
                 var data = gameData.gameDataElements;
                 var info = stageMap.nodes[currentStage];
                 data.currentStage = currentStage;
-                
+
                 stagesUIView.index = currentStage;
                 stagesUIView.name = info.stageName;
                 stagesUIView.description = info.stageDescription;
                 stagesUIView.latestScore = data.latestScores[currentStage];
                 stagesUIView.highestScore = data.highestScores[currentStage];
-                stagesUIView.latestTime = data.latestTimes[currentStage];
-                stagesUIView.fastestTime = data.fastestTimes[currentStage];
             }
         }
         private InputActionMap stagesActionMap;
@@ -38,6 +36,7 @@ namespace Stages.Map
         public InputAction escapeAction { get; set; }
         [SerializeField] private float duration;
         [SerializeField] private StagesUIView stagesUIView;
+        [SerializeField] private Transform camera;
         public StagesMapSO stageMap { get; set; }
         public StagesMapSO data
         {
@@ -45,10 +44,14 @@ namespace Stages.Map
         }
         public List<Transform> stageTransforms { get; set; }
         private ISaveData gameData = GameDataContainer.gameData;
-        private bool detailPanelOn = false;
-        
-        public void Start()
+        public bool detailPanelOn = false;
+        private bool moving = false;
+        public static StagesManager Instance;
+
+        public void Awake()
         {
+            Instance = this;
+            
             stagesActionMap = InputSystem.actions.FindActionMap("Stages");
             stagesActionMap.Enable();
 
@@ -61,7 +64,10 @@ namespace Stages.Map
             escapeAction = InputSystem.actions.FindAction("Escape");
             escapeAction.performed += OnEscapePerformed;
             escapeAction.Enable();
+        }
 
+        private void Start()
+        {
             currentStage = gameData.gameDataElements.currentStage;
             transform.position = stageTransforms[currentStage].position;
         }
@@ -80,50 +86,81 @@ namespace Stages.Map
 
         public void OnMovePerformed(InputAction.CallbackContext ctx)
         {
-            stagesUIView.UnShow();
-            detailPanelOn = false;
-            
+            if (moving) return;
             var value = ctx.ReadValue<Vector2>();
+            Move(value);
+        }
 
-            var node = stageMap.nodes[currentStage];
-
-            var way = currentStage;
-            if (!Mathf.Approximately(value.x, 0))
+        public void Move(Vector2 value)
+        {
+            if (detailPanelOn)
             {
-                if (value.x > 0)
+                if (!Mathf.Approximately(value.x, 0))
                 {
-                    way = int.Parse(node.right);
-                }
-                else
-                {
-                    way = int.Parse(node.left);
+                    stagesUIView.stageMenu = value.x < 0 ? StageMenu.Start : StageMenu.Back;
                 }
             }
-
-            if (!Mathf.Approximately(value.y, 0))
+            else
             {
-                if (value.y > 0)
+                var node = stageMap.nodes[currentStage];
+
+                var way = currentStage;
+                if (!Mathf.Approximately(value.x, 0))
                 {
-                    way = int.Parse(node.up);
+                    if (value.x > 0)
+                    {
+                        way = int.Parse(node.right);
+                    }
+                    else
+                    {
+                        way = int.Parse(node.left);
+                    }
                 }
-                else
+
+                if (!Mathf.Approximately(value.y, 0))
                 {
-                    way = int.Parse(node.down);
+                    if (value.y > 0)
+                    {
+                        way = int.Parse(node.up);
+                    }
+                    else
+                    {
+                        way = int.Parse(node.down);
+                    }
                 }
+
+                if (currentStage == way) return;
+                currentStage = way;
+
+                transform.DOMove(stageTransforms[currentStage].position, duration);
+
+                moving = true;
+                camera.DOMove(
+                    new Vector3(stageTransforms[currentStage].position.x, stageTransforms[currentStage].position.y,
+                        -10), 1f).OnComplete(
+                    () => { moving = false; });
             }
-
-            if (currentStage == way) return;
-            currentStage = way;
-
-            transform.DOMove(stageTransforms[currentStage].position, duration);
         }
 
         public void OnSubmitPerformed(InputAction.CallbackContext ctx)
         {
+            if (moving) return;
+            Submit();
+        }
+
+        public void Submit()
+        {
             if (detailPanelOn)
             {
-                GameDataContainer.currentStage = stageMap.nodes[currentStage];
-                SceneManager.LoadScene("InGame");
+                if (stagesUIView.stageMenu == StageMenu.Start)
+                {
+                    GameDataContainer.currentStage = stageMap.nodes[currentStage];
+                    SceneManager.LoadScene("InGame");
+                }
+                else
+                {
+                    Escape();
+                }
             }
             else
             {
@@ -131,10 +168,15 @@ namespace Stages.Map
                 detailPanelOn = true;
             }
         }
-        
+
         public void OnEscapePerformed(InputAction.CallbackContext ctx)
         {
             if (!detailPanelOn) return;
+            Escape();
+        }
+
+        public void Escape()
+        {
             stagesUIView.UnShow();
             detailPanelOn = false;
         }

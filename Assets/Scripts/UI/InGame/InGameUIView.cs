@@ -5,7 +5,7 @@ namespace UI.InGame
 {
    public class InGameUIView : MonoBehaviour
    {
-      [SerializeField] private TMP_Text scoreHUD, healthHUD, stageTimeHUD;
+      [SerializeField] private TMP_Text scoreHUD, healthHUD;
    
       public int score
       {
@@ -16,11 +16,5 @@ namespace UI.InGame
       {
          set => healthHUD.text = value.ToString();
       }
-   
-      public float stageTime
-      {
-         set => stageTimeHUD.text = value.ToString("00.00");
-      }
-
    }
 }

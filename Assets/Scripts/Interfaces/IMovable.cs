@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Interfaces
@@ -6,10 +7,12 @@ namespace Interfaces
     {
         public InputAction moveAction { get; set; }
 
-        void Start();
+        void Awake();
     
         void OnDestroy();
     
         void OnMovePerformed(InputAction.CallbackContext ctx);
+
+        void Move(Vector2 value);
     }
 }
