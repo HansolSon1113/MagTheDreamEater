@@ -13,7 +13,7 @@ namespace UI.InGame
         {
             var data = gameData.gameDataElements;
             var info = GameDataContainer.currentStage;
-            indexText.text = "Stage " + data.currentStage;
+            indexText.text = "Stage " + (data.currentStage + 1);
             nameText.text = info.stageName;
             descriptionText.text = info.stageDescription;
             latestScoreText.text = data.latestScores[data.currentStage].ToString();

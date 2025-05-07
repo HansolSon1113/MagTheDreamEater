@@ -55,7 +55,10 @@ namespace InGame.Notes
         private void OnDestroy()
         {
             eatAction.performed -= onEatPerformed;
+            eatAction.Disable();
             throwAction.performed -= onThrowPerformed;
+            throwAction.Disable();
+            
             inGameMap.Disable();
         }
 

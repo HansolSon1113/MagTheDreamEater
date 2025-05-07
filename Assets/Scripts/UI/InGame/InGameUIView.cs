@@ -19,7 +19,7 @@ namespace UI.InGame
    
       public float stageTime
       {
-         set => stageTimeHUD.text = value.ToString();
+         set => stageTimeHUD.text = value.ToString("00.00");
       }
 
    }

@@ -1,7 +1,6 @@
 using Interfaces;
 using DataLoader;
 using SaveData;
-using Stages;
 using Stages.Map;
 
 namespace InGame.Managers
@@ -9,7 +8,7 @@ namespace InGame.Managers
     public class StageDataLoader: DataLoader<StageDatabaseSO>
     {
         public DreamSpawnManager noteContainer;
-        public override string path => "StageInfo/Stage" + GameDataContainer.currentStage.stageIndex;
+        public override string path => "StageInfo/Stage" + int.Parse(GameDataContainer.currentStage.stageIndex + 1);
         public override IDataContainer<StageDatabaseSO> dataContainer => noteContainer;
     }
 }

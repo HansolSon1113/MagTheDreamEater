@@ -3,8 +3,8 @@ namespace Stages.Map
     [System.Serializable]
     public class StageEntry
     {
-        public float time;
-        public float duration;
+        public float startTime;
+        public float endTime;
         public float type;
     }
 }

@@ -32,7 +32,6 @@ namespace DataLoader
             try
             {
                 var db = Resources.Load<T>(path);
-
                 dataContainer.data = db;
                 
                 Destroy(gameObject);

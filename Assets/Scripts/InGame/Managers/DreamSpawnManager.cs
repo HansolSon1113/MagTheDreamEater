@@ -1,7 +1,6 @@
 using System.Collections;
 using InGame.Notes;
 using Interfaces;
-using Stages;
 using Stages.Map;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ namespace InGame.Managers
         }
 
         [SerializeField] private GameObject dream, nightmare;
-        [SerializeField] private Transform noteDestination;
+        [SerializeField] private Transform noteSpawnPoint, noteDestination, noteEndPoint;
         private ScoreManager scoreManager;
 
         private void Start()
@@ -31,8 +30,9 @@ namespace InGame.Managers
             while (notes.entries.Count > 0)
             {
                 var note = notes.entries[0];
+                yield return new WaitForSeconds(note.startTime - scoreManager.stageTime);
+                
                 var type = Mathf.RoundToInt(note.type);
-
                 GameObject noteObject;
                 switch (type)
                 {
@@ -43,19 +43,20 @@ namespace InGame.Managers
                         noteObject = Instantiate(nightmare, transform.position, Quaternion.identity);
                         break;
                     default:
-                        Debug.Log("Wrong type detected!");
+                        Debug.LogError("Wrong type detected! Must be 0 or 1.");
                         yield break;
                 }
 
                 var noteMovement = noteObject.GetComponent<NoteMovement>();
+                noteMovement.spawnPoint = noteSpawnPoint;
                 noteMovement.destination = noteDestination;
-                noteMovement.duration = note.duration;
+                noteMovement.endPoint = noteEndPoint;
+                noteMovement.endTime = note.endTime;
                 if (notes.entries.Count <= 1)
                 {
                     noteMovement.lastNote = true;
                 }
-
-                yield return new WaitForSeconds(note.time - scoreManager.stageTime);
+                
                 notes.entries.RemoveAt(0);
             }
         }

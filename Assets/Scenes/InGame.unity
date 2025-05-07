@@ -1012,7 +1012,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dream: {fileID: 8512661237185966154, guid: 942158bdad93c4d8b84ea6f52ac981f4, type: 3}
   nightmare: {fileID: 8512661237185966154, guid: 7c67b5317fe124b80ab5602abab5cded, type: 3}
-  noteDestination: {fileID: 2046023694}
+  noteSpawnPoint: {fileID: 1651392640}
+  noteDestination: {fileID: 1845572199}
+  noteEndPoint: {fileID: 2046023694}
 --- !u!4 &1651392640
 Transform:
   m_ObjectHideFlags: 0
@@ -1073,7 +1075,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &1845572197
 BoxCollider2D:
@@ -1185,8 +1187,8 @@ Transform:
   m_GameObject: {fileID: 1845572195}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.37, y: 0.03, z: 0}
-  m_LocalScale: {x: 1.4691417, y: 1.2347996, z: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1215,7 +1217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2046023694}
   m_Layer: 0
-  m_Name: Dream Destination Point
+  m_Name: Dream End Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
