@@ -16,7 +16,7 @@ namespace InGame.Managers
         private int _score;
         private int _health;
         private float _stageTime;
-        [SerializeField] private InGameUIView inGameUIView;
+        private InGameUIView inGameUIView;
 
         public int score
         {
@@ -60,6 +60,7 @@ namespace InGame.Managers
 
         private void Start()
         {
+            inGameUIView = InGameUIView.Instance;
             health = 100;
         }
 

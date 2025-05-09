@@ -1,6 +1,6 @@
+using DG.Tweening;
 using UI.Effects;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace UI.Lobby
 {
@@ -8,19 +8,16 @@ namespace UI.Lobby
     {
         private IMenuContainer lobbyManager;
         [SerializeField] private Menu menu;
-        private IMenuSubmittable lobbyFinish;
 
         private void Start()
         {
             lobbyManager = LobbyInputManager.Instance;
-            lobbyFinish = LobbyFinish.Instance;
         }
         
-        protected override void Do()
+        public override void Do()
         {
+            rect.DOMove(transform.position, duration);
             lobbyManager.menu = menu;
         }
-        
-
     }
 }

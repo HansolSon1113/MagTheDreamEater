@@ -1,23 +1,27 @@
-using Interfaces;
-using Stages.Map;
+using UI.Effects;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace UI.Stages
 {
-    public class StagesMouseManager : MonoBehaviour, IPointerEnterHandler
+    public class StagesMouseManager : UIOverlayEffect
     { 
         private IStageMenuContainer stagesUIView;
         [SerializeField] private StageMenu stageMenu;
+        [SerializeField] private StageEscape stageEscape;
 
         private void Start()
         {
             stagesUIView = StagesUIView.Instance;
         }
-        
-        public void OnPointerEnter(PointerEventData eventData)
+
+        public override void Do()
         {
-            stagesUIView.stageMenu = stageMenu;
+            if(stagesUIView.detailPanelOn)
+                stagesUIView.stageMenu = stageMenu;
+            else if (stagesUIView.escapePanelOn)
+            {
+                stagesUIView.stageEscape = stageEscape;
+            }
         }
     }
 }

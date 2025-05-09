@@ -8,7 +8,6 @@ namespace InGame.Notes
     public class NoteCollision : MonoBehaviour
     {
         private ScoreManager scoreManager;
-        private InputActionMap inGameMap;
         private InputAction eatAction, throwAction;
         private System.Action<InputAction.CallbackContext> onEatPerformed;
         private System.Action<InputAction.CallbackContext> onThrowPerformed;
@@ -32,9 +31,6 @@ namespace InGame.Notes
         private void Awake()
         {
             scoreManager = ScoreManager.Instance;
-
-            inGameMap = InputSystem.actions.FindActionMap("InGame");
-            inGameMap.Enable();
             
             eatAction = InputSystem.actions.FindAction("Eat");
             eatAction.Enable();
@@ -61,8 +57,6 @@ namespace InGame.Notes
             eatAction.Disable();
             throwAction.performed -= onThrowPerformed;
             throwAction.Disable();
-            
-            inGameMap.Disable();
         }
 
         private void OnAnyAction(InputEvent.Type type)

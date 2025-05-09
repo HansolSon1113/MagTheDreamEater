@@ -1,0 +1,1014 @@
+fileFormatVersion: 2
+guid: 6f9c85a2df45d43ac9dd48c5e6ea6288
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6737212524354889493
+    second: InGameESCBackground_White_0
+  - first:
+      213: 1983368086257056765
+    second: InGameESCBackground_White_1
+  - first:
+      213: 5731014796383725098
+    second: InGameESCBackground_White_2
+  - first:
+      213: -1520662096989783908
+    second: InGameESCBackground_White_3
+  - first:
+      213: 6611702282145311629
+    second: InGameESCBackground_White_4
+  - first:
+      213: -5748209656832173852
+    second: InGameESCBackground_White_5
+  - first:
+      213: 215178275159018333
+    second: InGameESCBackground_White_6
+  - first:
+      213: 6021870750920985562
+    second: InGameESCBackground_White_7
+  - first:
+      213: 8709161530459858248
+    second: InGameESCBackground_White_8
+  - first:
+      213: -708167502475646240
+    second: InGameESCBackground_White_9
+  - first:
+      213: -1476565145194413108
+    second: InGameESCBackground_White_10
+  - first:
+      213: -4808332352467132766
+    second: InGameESCBackground_White_11
+  - first:
+      213: 2452191438957878275
+    second: InGameESCBackground_White_12
+  - first:
+      213: 661482111142186108
+    second: InGameESCBackground_White_13
+  - first:
+      213: -2944641564891606321
+    second: InGameESCBackground_White_14
+  - first:
+      213: -8220353478417769287
+    second: InGameESCBackground_White_15
+  - first:
+      213: -8523519078661872499
+    second: InGameESCBackground_White_16
+  - first:
+      213: 7168203958506707542
+    second: InGameESCBackground_White_17
+  - first:
+      213: 5917363018391061788
+    second: InGameESCBackground_White_18
+  - first:
+      213: 6816768905343839509
+    second: InGameESCBackground_White_19
+  - first:
+      213: 6564055488833894746
+    second: InGameESCBackground_White_20
+  - first:
+      213: -5507968845806318367
+    second: InGameESCBackground_White_21
+  - first:
+      213: -2977883437920436167
+    second: InGameESCBackground_White_22
+  - first:
+      213: -219713931771065094
+    second: InGameESCBackground_White_23
+  - first:
+      213: 3749306720237804876
+    second: InGameESCBackground_White_24
+  - first:
+      213: 5085843883577627907
+    second: InGameESCBackground_White_25
+  - first:
+      213: -3801621080574552107
+    second: InGameESCBackground_White_26
+  - first:
+      213: -1498059609359309400
+    second: InGameESCBackground_White_27
+  - first:
+      213: 2954846335260758802
+    second: InGameESCBackground_White_28
+  - first:
+      213: -4946306804252031119
+    second: InGameESCBackground_White_29
+  - first:
+      213: -2170843499792048285
+    second: InGameESCBackground_White_30
+  - first:
+      213: -7360603606463251040
+    second: InGameESCBackground_White_31
+  - first:
+      213: 8355595102882584873
+    second: InGameESCBackground_White_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: InGameESCBackground_White_0
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 946
+        width: 56
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8938587ec9082a0800000000000000
+      internalID: -6737212524354889493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_1
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 942
+        width: 21
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfbb23024c6568b10800000000000000
+      internalID: 1983368086257056765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_2
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 942
+        width: 82
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a26a5f4d797a88f40800000000000000
+      internalID: 5731014796383725098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_3
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1003
+        width: 56
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98f58d21e585eae0800000000000000
+      internalID: -1520662096989783908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_4
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 942
+        width: 32
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b29eff13c71cb50800000000000000
+      internalID: 6611702282145311629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_5
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 945
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e85c0eb5c14a30b0800000000000000
+      internalID: -5748209656832173852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_6
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 942
+        width: 21
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b0c3e40877cf200800000000000000
+      internalID: 215178275159018333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_7
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 946
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adbc5ffea8bf19350800000000000000
+      internalID: 6021870750920985562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_8
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 815
+        width: 56
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845ae82d4482dd870800000000000000
+      internalID: 8709161530459858248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_9
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 815
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eaa67598651c26f0800000000000000
+      internalID: -708167502475646240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 807
+        width: 84
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3c6f8d2df228be0800000000000000
+      internalID: -1476565145194413108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_11
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 769
+        width: 75
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae9d29733f554db0800000000000000
+      internalID: -4808332352467132766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_12
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 766
+        width: 62
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c96581f1fe70220800000000000000
+      internalID: 2452191438957878275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_13
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 621
+        width: 73
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7cc7e3b97e0e2900800000000000000
+      internalID: 661482111142186108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_14
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 597
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc219cd19188227d0800000000000000
+      internalID: -2944641564891606321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_15
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 592
+        width: 28
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc13ce80107bed80800000000000000
+      internalID: -8220353478417769287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_16
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 592
+        width: 19
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d842818be8066b980800000000000000
+      internalID: -8523519078661872499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_17
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 596
+        width: 57
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a575085839a7360800000000000000
+      internalID: 7168203958506707542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_18
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 592
+        width: 20
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c158b3e4052be1250800000000000000
+      internalID: 5917363018391061788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_19
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 597
+        width: 56
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51da2fed3370a9e50800000000000000
+      internalID: 6816768905343839509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_20
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 592
+        width: 21
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59b5e170b5381b50800000000000000
+      internalID: 6564055488833894746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_21
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 625
+        width: 85
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eccbc76483cf83b0800000000000000
+      internalID: -5507968845806318367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_22
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 588
+        width: 75
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930cb3c6ace6ca6d0800000000000000
+      internalID: -2977883437920436167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_23
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 593
+        width: 85
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcc498d75b63fcf0800000000000000
+      internalID: -219713931771065094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_24
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 593
+        width: 85
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d52cde896380430800000000000000
+      internalID: 3749306720237804876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_25
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 412
+        width: 63
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305dcbfe01c849640800000000000000
+      internalID: 5085843883577627907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_26
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 412
+        width: 19
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d797b1e4cded3bc0800000000000000
+      internalID: -3801621080574552107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_27
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 450
+        width: 56
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a527cbe8b2d53be0800000000000000
+      internalID: -1498059609359309400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_28
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 450
+        width: 20
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21315132619b10920800000000000000
+      internalID: 2954846335260758802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_29
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 445
+        width: 84
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177c57e0b203b5bb0800000000000000
+      internalID: -4946306804252031119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_30
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 413
+        width: 85
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36fddeba65d9fd1e0800000000000000
+      internalID: -2170843499792048285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_31
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 411
+        width: 75
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad7c40a402e9d990800000000000000
+      internalID: -7360603606463251040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameESCBackground_White_32
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 408
+        width: 74
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9295f4ae97905f370800000000000000
+      internalID: 8355595102882584873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      InGameESCBackground_White_0: -6737212524354889493
+      InGameESCBackground_White_1: 1983368086257056765
+      InGameESCBackground_White_10: -1476565145194413108
+      InGameESCBackground_White_11: -4808332352467132766
+      InGameESCBackground_White_12: 2452191438957878275
+      InGameESCBackground_White_13: 661482111142186108
+      InGameESCBackground_White_14: -2944641564891606321
+      InGameESCBackground_White_15: -8220353478417769287
+      InGameESCBackground_White_16: -8523519078661872499
+      InGameESCBackground_White_17: 7168203958506707542
+      InGameESCBackground_White_18: 5917363018391061788
+      InGameESCBackground_White_19: 6816768905343839509
+      InGameESCBackground_White_2: 5731014796383725098
+      InGameESCBackground_White_20: 6564055488833894746
+      InGameESCBackground_White_21: -5507968845806318367
+      InGameESCBackground_White_22: -2977883437920436167
+      InGameESCBackground_White_23: -219713931771065094
+      InGameESCBackground_White_24: 3749306720237804876
+      InGameESCBackground_White_25: 5085843883577627907
+      InGameESCBackground_White_26: -3801621080574552107
+      InGameESCBackground_White_27: -1498059609359309400
+      InGameESCBackground_White_28: 2954846335260758802
+      InGameESCBackground_White_29: -4946306804252031119
+      InGameESCBackground_White_3: -1520662096989783908
+      InGameESCBackground_White_30: -2170843499792048285
+      InGameESCBackground_White_31: -7360603606463251040
+      InGameESCBackground_White_32: 8355595102882584873
+      InGameESCBackground_White_4: 6611702282145311629
+      InGameESCBackground_White_5: -5748209656832173852
+      InGameESCBackground_White_6: 215178275159018333
+      InGameESCBackground_White_7: 6021870750920985562
+      InGameESCBackground_White_8: 8709161530459858248
+      InGameESCBackground_White_9: -708167502475646240
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

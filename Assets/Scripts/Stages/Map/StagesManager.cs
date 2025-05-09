@@ -44,7 +44,12 @@ namespace Stages.Map
         }
         public List<Transform> stageTransforms { get; set; }
         private ISaveData gameData = GameDataContainer.gameData;
-        public bool detailPanelOn = false;
+
+        public bool detailPanelOn
+        {
+            get => stagesUIView.detailPanelOn;
+            set => stagesUIView.detailPanelOn = value;
+        }
         private bool moving = false;
         public static StagesManager Instance;
 
@@ -70,6 +75,7 @@ namespace Stages.Map
         {
             currentStage = gameData.gameDataElements.currentStage;
             transform.position = stageTransforms[currentStage].position;
+            camera.position = new Vector3(transform.position.x, transform.position.y, -10);
         }
 
         public void OnDestroy()
@@ -82,11 +88,13 @@ namespace Stages.Map
             escapeAction.Disable();
 
             stagesActionMap.Disable();
+            
+            ISaveable saveData = GameDataContainer.gameData;
+            saveData.Save();
         }
 
         public void OnMovePerformed(InputAction.CallbackContext ctx)
         {
-            if (moving) return;
             var value = ctx.ReadValue<Vector2>();
             Move(value);
         }
@@ -100,8 +108,18 @@ namespace Stages.Map
                     stagesUIView.stageMenu = value.x < 0 ? StageMenu.Start : StageMenu.Back;
                 }
             }
+            else if (stagesUIView.escapePanelOn)
+            {
+                var delta = Mathf.Abs(value.x) > Mathf.Abs(value.y) ? value.x : value.y;
+                if (Mathf.Approximately(delta, 0)) return;
+                var curr = (int)stagesUIView.stageEscape;
+                var next = (curr + (delta > 0 ? -1 : 1) + stagesUIView.cnt) % stagesUIView.cnt;
+                stagesUIView.stageEscape = (StageEscape)next;
+            }
             else
             {
+                if (moving) return;
+                
                 var node = stageMap.nodes[currentStage];
 
                 var way = currentStage;
@@ -145,7 +163,15 @@ namespace Stages.Map
         public void OnSubmitPerformed(InputAction.CallbackContext ctx)
         {
             if (moving) return;
-            Submit();
+            
+            if (stagesUIView.escapePanelOn)
+            {
+                StagesFinish.Instance.Submit();
+            }
+            else
+            {
+                Submit();
+            }
         }
 
         public void Submit()
@@ -171,8 +197,18 @@ namespace Stages.Map
 
         public void OnEscapePerformed(InputAction.CallbackContext ctx)
         {
-            if (!detailPanelOn) return;
-            Escape();
+            if (detailPanelOn)
+            {
+                Escape();
+            }
+            else if(stagesUIView.escapePanelOn)
+            {
+                stagesUIView.escapePanelOn = false;
+            }
+            else
+            {
+                stagesUIView.escapePanelOn = true;
+            }
         }
 
         public void Escape()

@@ -1,0 +1,1040 @@
+fileFormatVersion: 2
+guid: d60b7e4d43c5a425aac2caceb836b94f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3263305162275363560
+    second: StagesESCBackground_White_0
+  - first:
+      213: -5058688120546590055
+    second: StagesESCBackground_White_1
+  - first:
+      213: -2910182449570021290
+    second: StagesESCBackground_White_2
+  - first:
+      213: 5308591079604065882
+    second: StagesESCBackground_White_3
+  - first:
+      213: -2631676072489505743
+    second: StagesESCBackground_White_4
+  - first:
+      213: -9106520543029872353
+    second: StagesESCBackground_White_5
+  - first:
+      213: 8027005523233600367
+    second: StagesESCBackground_White_6
+  - first:
+      213: 2264599534422630443
+    second: StagesESCBackground_White_7
+  - first:
+      213: -3663732487066636090
+    second: StagesESCBackground_White_8
+  - first:
+      213: -2578088125502145946
+    second: StagesESCBackground_White_9
+  - first:
+      213: 4077809181487954885
+    second: StagesESCBackground_White_10
+  - first:
+      213: 7817204086242822734
+    second: StagesESCBackground_White_11
+  - first:
+      213: 7844553030620254935
+    second: StagesESCBackground_White_12
+  - first:
+      213: -2587025338397421257
+    second: StagesESCBackground_White_13
+  - first:
+      213: 1819097070011011614
+    second: StagesESCBackground_White_14
+  - first:
+      213: 2636821490317624991
+    second: StagesESCBackground_White_15
+  - first:
+      213: -3924071961218851060
+    second: StagesESCBackground_White_16
+  - first:
+      213: -1210939991772150095
+    second: StagesESCBackground_White_17
+  - first:
+      213: -9112493688334749859
+    second: StagesESCBackground_White_18
+  - first:
+      213: 5276522512974205779
+    second: StagesESCBackground_White_19
+  - first:
+      213: 6526435512342412146
+    second: StagesESCBackground_White_20
+  - first:
+      213: -8360197661938750019
+    second: StagesESCBackground_White_21
+  - first:
+      213: 7433030549931716114
+    second: StagesESCBackground_White_22
+  - first:
+      213: -7740006854075771103
+    second: StagesESCBackground_White_23
+  - first:
+      213: -4437151332318659511
+    second: StagesESCBackground_White_24
+  - first:
+      213: 3042815926637654198
+    second: StagesESCBackground_White_25
+  - first:
+      213: 104885730963300157
+    second: StagesESCBackground_White_26
+  - first:
+      213: 3852292897952826624
+    second: StagesESCBackground_White_27
+  - first:
+      213: -8090809226894839573
+    second: StagesESCBackground_White_28
+  - first:
+      213: 491861079089226222
+    second: StagesESCBackground_White_29
+  - first:
+      213: -8664684603970791526
+    second: StagesESCBackground_White_30
+  - first:
+      213: -523460703737285673
+    second: StagesESCBackground_White_31
+  - first:
+      213: 4199446307915182564
+    second: StagesESCBackground_White_32
+  - first:
+      213: -8664199887337455301
+    second: StagesESCBackground_White_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StagesESCBackground_White_0
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 946
+        width: 56
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea1f1f51c6994d20800000000000000
+      internalID: 3263305162275363560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_1
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 942
+        width: 21
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9920559d4fdebc9b0800000000000000
+      internalID: -5058688120546590055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_2
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 942
+        width: 82
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6508dcd1b74fc97d0800000000000000
+      internalID: -2910182449570021290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_3
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1003
+        width: 56
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a569b95f577eba940800000000000000
+      internalID: 5308591079604065882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_4
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 942
+        width: 32
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c2e572e886a7bd0800000000000000
+      internalID: -2631676072489505743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_5
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 945
+        width: 50
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1938e480d32f9180800000000000000
+      internalID: -9106520543029872353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_6
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 942
+        width: 21
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63ff669ef6a56f60800000000000000
+      internalID: 8027005523233600367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_7
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 946
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20a6c737497d6f10800000000000000
+      internalID: 2264599534422630443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_8
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 815
+        width: 56
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0b55cd6bec72dc0800000000000000
+      internalID: -3663732487066636090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_9
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 815
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66abac7528ac83cd0800000000000000
+      internalID: -2578088125502145946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 807
+        width: 84
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb7a6c68d9479830800000000000000
+      internalID: 4077809181487954885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_11
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 769
+        width: 75
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4a4c39f2b94c7c60800000000000000
+      internalID: 7817204086242822734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_12
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 766
+        width: 62
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d295db4b637ddc60800000000000000
+      internalID: 7844553030620254935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_13
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 592
+        width: 63
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73113ef492a091cd0800000000000000
+      internalID: -2587025338397421257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_14
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 592
+        width: 19
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12d5fda52bbe3910800000000000000
+      internalID: 1819097070011011614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_15
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 627
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f968f7acc2fd79420800000000000000
+      internalID: 2636821490317624991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_16
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 616
+        width: 20
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0fda768755ea89c0800000000000000
+      internalID: -3924071961218851060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_17
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 657
+        width: 58
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b64b1a4e70e13fe0800000000000000
+      internalID: -1210939991772150095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_18
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 592
+        width: 32
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f61d0454be98180800000000000000
+      internalID: -9112493688334749859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_19
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 617
+        width: 81
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353dd23f449f93940800000000000000
+      internalID: 5276522512974205779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_20
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 617
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27bf9aa158e829a50800000000000000
+      internalID: 6526435512342412146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_21
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 593
+        width: 85
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbde61c458c9afb80800000000000000
+      internalID: -8360197661938750019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_22
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 591
+        width: 75
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e6e4d37ed672760800000000000000
+      internalID: 7433030549931716114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_23
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 593
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12799b746c8f59490800000000000000
+      internalID: -7740006854075771103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_24
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 591
+        width: 75
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cbe7e4f521c62c0800000000000000
+      internalID: -4437151332318659511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_25
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 593
+        width: 85
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b07328b6f04a3a20800000000000000
+      internalID: 3042815926637654198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_26
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 412
+        width: 63
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f13104401a47100800000000000000
+      internalID: 104885730963300157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_27
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 412
+        width: 19
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0050d39faf7167530800000000000000
+      internalID: 3852292897952826624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_28
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 450
+        width: 56
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0fa7500eba7bf80800000000000000
+      internalID: -8090809226894839573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_29
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 450
+        width: 20
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee124f1ab0173d600800000000000000
+      internalID: 491861079089226222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_30
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 445
+        width: 84
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a975689924bd0c780800000000000000
+      internalID: -8664684603970791526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_31
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 413
+        width: 85
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3fcdb634b4cb8f0800000000000000
+      internalID: -523460703737285673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_32
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 411
+        width: 75
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e13c9cda2e674a30800000000000000
+      internalID: 4199446307915182564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StagesESCBackground_White_33
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 408
+        width: 74
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31854c7b1492c780800000000000000
+      internalID: -8664199887337455301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      StagesESCBackground_White_0: 3263305162275363560
+      StagesESCBackground_White_1: -5058688120546590055
+      StagesESCBackground_White_10: 4077809181487954885
+      StagesESCBackground_White_11: 7817204086242822734
+      StagesESCBackground_White_12: 7844553030620254935
+      StagesESCBackground_White_13: -2587025338397421257
+      StagesESCBackground_White_14: 1819097070011011614
+      StagesESCBackground_White_15: 2636821490317624991
+      StagesESCBackground_White_16: -3924071961218851060
+      StagesESCBackground_White_17: -1210939991772150095
+      StagesESCBackground_White_18: -9112493688334749859
+      StagesESCBackground_White_19: 5276522512974205779
+      StagesESCBackground_White_2: -2910182449570021290
+      StagesESCBackground_White_20: 6526435512342412146
+      StagesESCBackground_White_21: -8360197661938750019
+      StagesESCBackground_White_22: 7433030549931716114
+      StagesESCBackground_White_23: -7740006854075771103
+      StagesESCBackground_White_24: -4437151332318659511
+      StagesESCBackground_White_25: 3042815926637654198
+      StagesESCBackground_White_26: 104885730963300157
+      StagesESCBackground_White_27: 3852292897952826624
+      StagesESCBackground_White_28: -8090809226894839573
+      StagesESCBackground_White_29: 491861079089226222
+      StagesESCBackground_White_3: 5308591079604065882
+      StagesESCBackground_White_30: -8664684603970791526
+      StagesESCBackground_White_31: -523460703737285673
+      StagesESCBackground_White_32: 4199446307915182564
+      StagesESCBackground_White_33: -8664199887337455301
+      StagesESCBackground_White_4: -2631676072489505743
+      StagesESCBackground_White_5: -9106520543029872353
+      StagesESCBackground_White_6: 8027005523233600367
+      StagesESCBackground_White_7: 2264599534422630443
+      StagesESCBackground_White_8: -3663732487066636090
+      StagesESCBackground_White_9: -2578088125502145946
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

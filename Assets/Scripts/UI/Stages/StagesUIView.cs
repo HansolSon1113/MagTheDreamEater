@@ -8,15 +8,27 @@ namespace UI.Stages
 {
     public enum StageMenu
     {
-        Start, Back
+        Start,
+        Back
+    }
+
+    public enum StageEscape
+    {
+        Resume,
+        Settings,
+        Lobby,
+        Exit
     }
 
     public interface IStageMenuContainer
     {
-        StageMenu stageMenu { get; set; }
+        StageMenu stageMenu { set; }
+        StageEscape stageEscape { get; set; }
+        bool detailPanelOn { get; }
+        bool escapePanelOn { get; set; }
     }
-    
-    public class StagesUIView : MonoBehaviour, IStageMenuContainer, IShowContainer
+
+    public class StagesUIView : EscapePanel, IStageMenuContainer, IShowContainer
     {
         [SerializeField] private RectTransform panel;
         [SerializeField] private TMP_Text indexText, nameText, descriptionText, latestScoreText, highestScoreText;
@@ -30,13 +42,14 @@ namespace UI.Stages
             set
             {
                 _stageBtn = value;
-                
+
                 btnOverlay[0].SetActive(false);
                 btnOverlay[1].SetActive(false);
                 btnOverlay[(int)_stageBtn].SetActive(true);
             }
         }
-        
+        public bool detailPanelOn { get; set; }
+
         public int index
         {
             set => indexText.text = "Stage " + (value + 1);
@@ -66,7 +79,7 @@ namespace UI.Stages
         {
             Instance = this;
         }
-        
+
         public void Show()
         {
             panel.DOAnchorPosX(0, 1f);

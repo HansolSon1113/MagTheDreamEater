@@ -855,7 +855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0.1
   rect: {fileID: 2991230147750684082}
-  lobbyManager: {fileID: 8889912225866287277}
   menu: 3
 --- !u!1 &6628982730012091347
 GameObject:
@@ -891,7 +890,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0.1
   rect: {fileID: 2991230147750684082}
-  lobbyManager: {fileID: 8889912225866287277}
   menu: 1
 --- !u!1 &6628982730830760710
 GameObject:
@@ -927,7 +925,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0.1
   rect: {fileID: 2991230147750684082}
-  lobbyManager: {fileID: 8889912225866287277}
   menu: 2
 --- !u!1 &6675934131181386669
 GameObject:
@@ -993,7 +990,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0.1
   rect: {fileID: 2991230147750684082}
-  lobbyManager: {fileID: 8889912225866287277}
   menu: 0
 --- !u!114 &8889912225866287276
 MonoBehaviour:
@@ -1037,6 +1033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5895ad3d923694c9087daac86be2de94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lobbyFinish: {fileID: 1094675973}
   menuTransforms:
   - {fileID: 2627039235606911835}
   - {fileID: 2535051975606928165}
