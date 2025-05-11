@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using Interfaces;
+using Setting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -12,17 +13,19 @@ namespace UI.Lobby
         Menu menu { get; set; }
     }
     
-    public class LobbyInputManager : MonoBehaviour, IMovable, ISubmittable, IPointerClickHandler, IMenuContainer
+    public class LobbyInputManager : MonoBehaviour, IMovable, ISubmittable, IEscapable, IPointerClickHandler, IMenuContainer
     {
         private const int cnt = 4;
         private InputActionMap menuMap;
         public InputAction moveAction { get; set; }
         public InputAction submitAction { get; set; }
+        public InputAction escapeAction { get; set; }
         private Menu _menu = Menu.NewStart;
         public LobbyFinish lobbyFinish;
         public static LobbyInputManager Instance;
         [SerializeField] private List<Transform> menuTransforms = new List<Transform>();
         [SerializeField] private float duration;
+        private SettingManager settingManager;
 
         public Menu menu
         {
@@ -47,22 +50,38 @@ namespace UI.Lobby
             submitAction = InputSystem.actions.FindAction("Submit");
             submitAction.performed += OnSubmitPerformed;
             submitAction.Enable();
+            escapeAction = InputSystem.actions.FindAction("Escape");
+            escapeAction.performed += OnEscapePerformed;
+            escapeAction.Enable();
         }
 
         private void Start()
         {
             lobbyFinish = LobbyFinish.Instance;
+            settingManager = SettingManager.Instance;
         }
 
         public void OnDestroy()
         {
             moveAction.performed -= OnMovePerformed;
             submitAction.performed -= OnSubmitPerformed;
+            escapeAction.performed -= OnEscapePerformed;
             
             moveAction.Disable();
             submitAction.Disable();
+            escapeAction.Disable();
             
             menuMap.Disable();
+        }
+
+        public void OnEscapePerformed(InputAction.CallbackContext ctx)
+        {
+            Escape();
+        }
+
+        public void Escape()
+        {
+            settingManager.Off();
         }
 
         public void OnMovePerformed(InputAction.CallbackContext ctx)
@@ -90,12 +109,12 @@ namespace UI.Lobby
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            lobbyFinish.Submit(menu);
+            lobbyFinish.Finish(menu);
         }
 
         public void Submit()
         {
-            lobbyFinish.Submit(_menu);
+            lobbyFinish.Finish(_menu);
         }
 
         private void AnimateTo(Menu value)

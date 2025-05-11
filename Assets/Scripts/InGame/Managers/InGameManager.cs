@@ -1,18 +1,21 @@
 using Interfaces;
+using Setting;
 using UI.InGame;
+using UI.Lobby;
 using UI.Stages;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace InGame.Managers
 {
-    public class InGameManager: MonoBehaviour, IMovable, ISubmittable, IEscapable
+    public class InGameManager : MonoBehaviour, IMovable, ISubmittable, IEscapable
     {
         private IEscapePanel inGameUIView;
         private InputActionMap inGameActionMap;
         public InputAction moveAction { get; set; }
         public InputAction submitAction { get; set; }
         public InputAction escapeAction { get; set; }
+        private SettingManager settingManager;
 
         public void Awake()
         {
@@ -33,8 +36,9 @@ namespace InGame.Managers
         private void Start()
         {
             inGameUIView = InGameUIView.Instance;
+            settingManager = SettingManager.Instance;
         }
-        
+
         public void OnDestroy()
         {
             moveAction.performed -= OnMovePerformed;
@@ -46,9 +50,10 @@ namespace InGame.Managers
 
             inGameActionMap.Disable();
         }
-        
+
         public void OnMovePerformed(InputAction.CallbackContext ctx)
         {
+            if (!inGameUIView.escapePanelOn) return;
             var value = ctx.ReadValue<Vector2>();
             Move(value);
         }
@@ -57,11 +62,11 @@ namespace InGame.Managers
         {
             var delta = Mathf.Abs(value.x) > Mathf.Abs(value.y) ? value.x : value.y;
             if (Mathf.Approximately(delta, 0)) return;
-            var curr = (int)inGameUIView.stageEscape;
+            var curr = (int)inGameUIView.escapeMenu;
             var next = (curr + (delta > 0 ? -1 : 1) + inGameUIView.cnt) % inGameUIView.cnt;
-            inGameUIView.stageEscape = (StageEscape)next;
+            inGameUIView.escapeMenu = (EscapeMenu)next;
         }
-        
+
         public void OnSubmitPerformed(InputAction.CallbackContext ctx)
         {
             Submit();
@@ -71,7 +76,8 @@ namespace InGame.Managers
         {
             if (inGameUIView.escapePanelOn)
             {
-                InGameFinish.Instance.Submit();
+                IMenuSubmittable inGameFinish = InGameFinish.Instance;
+                inGameFinish.Submit();
             }
         }
 
@@ -82,6 +88,7 @@ namespace InGame.Managers
 
         public void Escape()
         {
+            settingManager.Off();
             inGameUIView.escapePanelOn = !inGameUIView.escapePanelOn;
         }
     }

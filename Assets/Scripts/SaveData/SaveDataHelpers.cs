@@ -57,7 +57,8 @@ namespace SaveData
         {
             var json = JsonUtility.ToJson(gameDataElements);
 
-            var encrypted = AesUtil.EncryptString(json, out var iv);
+            var aesUtil = new AesUtil();
+            var encrypted = aesUtil.EncryptString(json, out var iv);
 
             using var fs = new FileStream(FilePath, FileMode.Create, FileAccess.Write);
             fs.WriteByte((byte)iv.Length);
@@ -77,20 +78,21 @@ namespace SaveData
             var cipher = new byte[fs.Length - 1 - ivLength];
             fs.Read(cipher, 0, cipher.Length);
 
-            var json = AesUtil.DecryptString(cipher, iv);
+            var aesUtil = new AesUtil();
+            var json = aesUtil.DecryptString(cipher, iv);
 
             gameDataElements = JsonUtility.FromJson<GameDataElements>(json);
         }
     }
 
-    public static class AesUtil
+    public class AesUtil
     {
-        private static byte[] Key = Encoding.UTF8.GetBytes("6UNVwN80SN2eLUSZFiTUM37o8SkKsQ7l");
+        private byte[] key = Encoding.UTF8.GetBytes("6UNVwN80SN2eLUSZFiTUM37o8SkKsQ7l");
 
-        public static byte[] EncryptString(string plainText, out byte[] iv)
+        public byte[] EncryptString(string plainText, out byte[] iv)
         {
             using Aes aes = Aes.Create();
-            aes.Key = Key;
+            aes.Key = key;
             aes.GenerateIV();
             iv = aes.IV;
 
@@ -102,16 +104,66 @@ namespace SaveData
             return ms.ToArray();
         }
 
-        public static string DecryptString(byte[] cipherText, byte[] iv)
+        public string DecryptString(byte[] cipherText, byte[] iv)
         {
             using Aes aes = Aes.Create();
-            aes.Key = Key;
+            aes.Key = key;
             aes.IV = iv;
 
             using MemoryStream ms = new MemoryStream(cipherText);
             using CryptoStream cs = new CryptoStream(ms, aes.CreateDecryptor(), CryptoStreamMode.Read);
             using StreamReader sr = new StreamReader(cs);
             return sr.ReadToEnd();
+        }
+    }
+    
+    public enum HandMode
+    {
+        OneHand, TwoHand
+    }
+    
+    public class SettingDataElements
+    {
+        public float totalVolume = 100;
+        public float popVolume = 100;
+        public float musicVolume = 100;
+        public HandMode handMode = HandMode.OneHand;
+    }
+
+    public class SettingData
+    {
+        private static string FilePath => Path.Combine(Application.persistentDataPath, "settingdata.dat");
+        public SettingDataElements settingDataElements { get; private set; }
+
+        public SettingData()
+        {
+            Load();
+        }
+        
+        public void Save()
+        {
+            var json = JsonUtility.ToJson(settingDataElements);
+            File.WriteAllText(FilePath, json);
+        }
+
+        private void Load()
+        {
+            if (File.Exists(FilePath))
+            {
+                try
+                {
+                    var json = File.ReadAllText(FilePath);
+                    settingDataElements = JsonUtility.FromJson<SettingDataElements>(json);
+                }
+                catch
+                {
+                    settingDataElements = new SettingDataElements();
+                }
+            }
+            else
+            {
+                settingDataElements = new SettingDataElements();
+            }
         }
     }
 }

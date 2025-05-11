@@ -1,5 +1,7 @@
 using System;
+using Interfaces;
 using SaveData;
+using Setting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Application = UnityEngine.Application;
@@ -16,21 +18,36 @@ namespace UI.Lobby
 
     public interface IMenuSubmittable
     {
-        void Submit(Menu menu);
+        void Submit();
     }
     
     public class LobbyFinish: MonoBehaviour, IMenuSubmittable
     {
         public static LobbyFinish Instance;
         private const int STAGE_COUNT = 4;
+        private Menu menu;
+        private SettingManager settingManager;
 
         private void Awake()
         {
             Instance = this;
         }
 
-        public void Submit(Menu menu)
+        private void Start()
         {
+            settingManager = SettingManager.Instance;
+        }
+
+        public void Finish(Menu _menu)
+        {
+            menu = _menu;
+            Submit();
+        }
+
+        public void Submit()
+        {
+            AudioManager.Instance.PlayPop();
+            
             switch (menu)
             {
                 case Menu.NewStart:
@@ -45,7 +62,7 @@ namespace UI.Lobby
                     SceneManager.LoadScene("Stages");
                     break;
                 case Menu.Settings:
-                    SceneManager.LoadScene("Settings");
+                    settingManager.On();
                     break;
                 case Menu.Exit:
                     Application.Quit();

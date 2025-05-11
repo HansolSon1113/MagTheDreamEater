@@ -12,7 +12,7 @@ namespace UI.Stages
         Back
     }
 
-    public enum StageEscape
+    public enum EscapeMenu
     {
         Resume,
         Settings,
@@ -23,7 +23,7 @@ namespace UI.Stages
     public interface IStageMenuContainer
     {
         StageMenu stageMenu { set; }
-        StageEscape stageEscape { get; set; }
+        EscapeMenu escapeMenu { get; set; }
         bool detailPanelOn { get; }
         bool escapePanelOn { get; set; }
     }
@@ -41,11 +41,11 @@ namespace UI.Stages
             get => _stageBtn;
             set
             {
+                btnOverlay[(int)_stageBtn].SetActive(false);
+                
                 _stageBtn = value;
 
-                btnOverlay[0].SetActive(false);
-                btnOverlay[1].SetActive(false);
-                btnOverlay[(int)_stageBtn].SetActive(true);
+                btnOverlay[(int)value].SetActive(true);
             }
         }
         public bool detailPanelOn { get; set; }

@@ -18,10 +18,15 @@ namespace InGame.Managers
         [SerializeField] private GameObject dream, nightmare;
         [SerializeField] private Transform noteSpawnPoint, noteDestination, noteEndPoint;
         private ScoreManager scoreManager;
-
+        private float ratio;
+        
         private void Start()
         {
             scoreManager = ScoreManager.Instance;
+            
+            ratio = 1 + (noteDestination.position.x - noteEndPoint.position.x) /
+                (noteSpawnPoint.position.x - noteDestination.position.x);
+            
             StartCoroutine(SpawnLoop());
         }
 
@@ -48,10 +53,9 @@ namespace InGame.Managers
                 }
 
                 var noteMovement = noteObject.GetComponent<NoteMovement>();
-                noteMovement.spawnPoint = noteSpawnPoint;
-                noteMovement.destination = noteDestination;
+                var duration = (note.endTime - scoreManager.stageTime) * ratio;
+                noteMovement.duration = duration;
                 noteMovement.endPoint = noteEndPoint;
-                noteMovement.endTime = note.endTime;
                 if (notes.entries.Count <= 1)
                 {
                     noteMovement.lastNote = true;

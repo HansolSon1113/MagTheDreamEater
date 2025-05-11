@@ -10,11 +10,11 @@ namespace Stages.Map
         [SerializeField] private StagesManager mapContainer;
         public override IDataContainer<StagesMapSO> dataContainer => mapContainer;
         public override string path => "StageMap/Map";
-        public List<Transform> transforms = new List<Transform>();
+        public List<GameObject> objects = new List<GameObject>();
         
         public override void Load()
         {
-            mapContainer.stageTransforms = transforms;
+            mapContainer.stageObjects = objects;
             base.Load();
         }
     }

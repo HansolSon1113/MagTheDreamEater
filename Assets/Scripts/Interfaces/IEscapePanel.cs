@@ -10,39 +10,40 @@ namespace Interfaces
     {
         public int cnt { get; set; }
         public bool escapePanelOn { get; set; }
-        public StageEscape stageEscape { get; set; }
+        public EscapeMenu escapeMenu { get; set; }
     }
 
-    public class EscapePanel: MonoBehaviour, IEscapePanel
+    public class EscapePanel : MonoBehaviour, IEscapePanel
     {
-        [SerializeField] private RectTransform overlay;
+        //[SerializeField] private RectTransform overlay;
         private bool _escapePanelOn = false;
-        private StageEscape _stageEscape;
-        public StageEscape stageEscape
+        private EscapeMenu _escapeMenu;
+
+        public EscapeMenu escapeMenu
         {
-            get => _stageEscape;
+            get => _escapeMenu;
             set
             {
-                _stageEscape = value;
-                foreach (var effect in escapeTransforms)
-                {
-                    effect.SetActive(false);
-                }
-                
-                escapeTransforms[(int)value].SetActive(true);
+                escapeObjects[(int)_escapeMenu].SetActive(false);
+
+                _escapeMenu = value;
+
+                escapeObjects[(int)value].SetActive(true);
                 //overlay.DOMove(escapeTransforms[(int)value].position, duration).SetUpdate(true);
             }
         }
 
         [SerializeField] private GameObject escapePanel;
+
         public int cnt { get; set; }
+
         //[SerializeField] private List<RectTransform> escapeTransforms = new List<RectTransform>();
-        [SerializeField] private List<GameObject> escapeTransforms = new List<GameObject>();
+        [SerializeField] private List<GameObject> escapeObjects = new List<GameObject>();
         [SerializeField] private float duration = 0.1f;
 
         private void Start()
         {
-            cnt = escapeTransforms.Count;
+            cnt = escapeObjects.Count;
         }
 
         public bool escapePanelOn

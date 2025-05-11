@@ -6,15 +6,13 @@ namespace InGame.Notes
 {
     public class NoteMovement : MonoBehaviour
     {
-        [HideInInspector] public float endTime;
-        [HideInInspector] public Transform spawnPoint, destination, endPoint;
+        [HideInInspector] public float duration;
+        [HideInInspector] public Transform endPoint;
         public bool lastNote;
         private ScoreManager scoreManager = ScoreManager.Instance;
 
         private void Start()
         {
-            var duration = (endTime - scoreManager.stageTime) * (1 + (destination.position.x - endPoint.position.x) / (spawnPoint.position.x - destination.position.x));
-
             transform.DOMove(endPoint.position, duration).SetEase(Ease.Linear).OnComplete(() =>
             {
                 Destroy(gameObject);
@@ -26,6 +24,7 @@ namespace InGame.Notes
             if (lastNote || scoreManager.health <= 0)
             {
                 ScoreManager.Instance.Stop();
+                GetComponent<NoteCollision>().WrapUp();
             }
         }
     }

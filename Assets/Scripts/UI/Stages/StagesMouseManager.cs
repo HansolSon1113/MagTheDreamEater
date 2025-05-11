@@ -7,7 +7,7 @@ namespace UI.Stages
     { 
         private IStageMenuContainer stagesUIView;
         [SerializeField] private StageMenu stageMenu;
-        [SerializeField] private StageEscape stageEscape;
+        [SerializeField] private EscapeMenu escapeMenu;
 
         private void Start()
         {
@@ -20,7 +20,7 @@ namespace UI.Stages
                 stagesUIView.stageMenu = stageMenu;
             else if (stagesUIView.escapePanelOn)
             {
-                stagesUIView.stageEscape = stageEscape;
+                stagesUIView.escapeMenu = escapeMenu;
             }
         }
     }

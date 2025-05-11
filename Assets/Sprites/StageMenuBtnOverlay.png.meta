@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: f3868f9a2e70f43f28f60fba5266622f
+guid: ed449cf316a924a16add90e54236ba4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 355511271332519708
-    second: StageMenuBtnOverlay_0
+      213: -7957033849422220323
+    second: StageMenuBtnOverlay.png.meta_0
   - first:
-      213: -4431019741442108918
-    second: StageMenuBtnOverlay_1
+      213: -2000614791133025075
+    second: StageMenuBtnOverlay.png.meta_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -142,7 +142,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StageMenuBtnOverlay_0
+      name: StageMenuBtnOverlay.png.meta_0
       rect:
         serializedVersion: 2
         x: 1515
@@ -157,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1f1c612e970fe400800000000000000
-      internalID: 355511271332519708
+      spriteID: dd3fd634fdfe29190800000000000000
+      internalID: -7957033849422220323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StageMenuBtnOverlay_1
+      name: StageMenuBtnOverlay.png.meta_1
       rect:
         serializedVersion: 2
         x: 2014
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a02999e850bd182c0800000000000000
-      internalID: -4431019741442108918
+      spriteID: dccaf1a72736c34e0800000000000000
+      internalID: -2000614791133025075
       vertices: []
       indices: 
       edges: []
@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StageMenuBtnOverlay.png.meta_0: -7957033849422220323
+      StageMenuBtnOverlay.png.meta_1: -2000614791133025075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -7,7 +7,7 @@ namespace UI.InGame
     public class InGameMouseManager : UIOverlayEffect
     {
         private InGameUIView inGameUIView;
-        [SerializeField] private StageEscape inGameEscape;
+        [SerializeField] private EscapeMenu escapeMenu;
 
         private void Start()
         {
@@ -16,7 +16,7 @@ namespace UI.InGame
 
         public override void Do()
         {
-            inGameUIView.stageEscape = inGameEscape;
+            inGameUIView.escapeMenu = escapeMenu;
         }
     }
 }

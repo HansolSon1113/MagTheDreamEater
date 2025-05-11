@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Interfaces;
 using SaveData;
+using Setting;
+using UI.Lobby;
 using UI.Stages;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,6 +14,7 @@ namespace Stages.Map
     public class StagesManager : MonoBehaviour, IMovable, ISubmittable, IMapContainer, IEscapable
     {
         private int _currentStage;
+
         private int currentStage
         {
             get => _currentStage;
@@ -20,29 +23,34 @@ namespace Stages.Map
                 _currentStage = value;
 
                 var data = gameData.gameDataElements;
-                var info = stageMap.nodes[currentStage];
-                data.currentStage = currentStage;
+                var info = stageMap.nodes[value];
+                data.currentStage = value;
 
-                stagesUIView.index = currentStage;
+                stagesUIView.index = _currentStage;
                 stagesUIView.name = info.stageName;
                 stagesUIView.description = info.stageDescription;
-                stagesUIView.latestScore = data.latestScores[currentStage];
-                stagesUIView.highestScore = data.highestScores[currentStage];
+                stagesUIView.latestScore = data.latestScores[value];
+                stagesUIView.highestScore = data.highestScores[value];
             }
         }
+
         private InputActionMap stagesActionMap;
         public InputAction moveAction { get; set; }
         public InputAction submitAction { get; set; }
         public InputAction escapeAction { get; set; }
         [SerializeField] private float duration;
-        [SerializeField] private StagesUIView stagesUIView;
+        private StagesUIView stagesUIView;
         [SerializeField] private Transform camera;
+        [SerializeField] private Sprite selectSprite, unSelectSprite;
+        private SettingManager settingManager;
         public StagesMapSO stageMap { get; set; }
+
         public StagesMapSO data
         {
             set => stageMap = value;
         }
-        public List<Transform> stageTransforms { get; set; }
+
+        public List<GameObject> stageObjects { get; set; }
         private ISaveData gameData = GameDataContainer.gameData;
 
         public bool detailPanelOn
@@ -50,13 +58,14 @@ namespace Stages.Map
             get => stagesUIView.detailPanelOn;
             set => stagesUIView.detailPanelOn = value;
         }
+
         private bool moving = false;
         public static StagesManager Instance;
 
         public void Awake()
         {
             Instance = this;
-            
+
             stagesActionMap = InputSystem.actions.FindActionMap("Stages");
             stagesActionMap.Enable();
 
@@ -73,9 +82,15 @@ namespace Stages.Map
 
         private void Start()
         {
+            stagesUIView = StagesUIView.Instance;
+            settingManager = SettingManager.Instance;
+
             currentStage = gameData.gameDataElements.currentStage;
-            transform.position = stageTransforms[currentStage].position;
+            transform.position = stageObjects[currentStage].transform.position;
             camera.position = new Vector3(transform.position.x, transform.position.y, -10);
+            
+            stageObjects[currentStage].transform.localScale = new Vector3(0.4f, 0.4f, 1f);
+            stageObjects[currentStage].GetComponent<SpriteRenderer>().sprite = selectSprite;
         }
 
         public void OnDestroy()
@@ -88,7 +103,7 @@ namespace Stages.Map
             escapeAction.Disable();
 
             stagesActionMap.Disable();
-            
+
             ISaveable saveData = GameDataContainer.gameData;
             saveData.Save();
         }
@@ -112,61 +127,60 @@ namespace Stages.Map
             {
                 var delta = Mathf.Abs(value.x) > Mathf.Abs(value.y) ? value.x : value.y;
                 if (Mathf.Approximately(delta, 0)) return;
-                var curr = (int)stagesUIView.stageEscape;
+                var curr = (int)stagesUIView.escapeMenu;
                 var next = (curr + (delta > 0 ? -1 : 1) + stagesUIView.cnt) % stagesUIView.cnt;
-                stagesUIView.stageEscape = (StageEscape)next;
+                stagesUIView.escapeMenu = (EscapeMenu)next;
             }
             else
             {
                 if (moving) return;
-                
+
                 var node = stageMap.nodes[currentStage];
 
                 var way = currentStage;
                 if (!Mathf.Approximately(value.x, 0))
                 {
-                    if (value.x > 0)
-                    {
-                        way = int.Parse(node.right);
-                    }
-                    else
-                    {
-                        way = int.Parse(node.left);
-                    }
+                    way = int.Parse(value.x > 0 ? node.right : node.left);
                 }
 
                 if (!Mathf.Approximately(value.y, 0))
                 {
-                    if (value.y > 0)
-                    {
-                        way = int.Parse(node.up);
-                    }
-                    else
-                    {
-                        way = int.Parse(node.down);
-                    }
+                    way = int.Parse(value.y > 0 ? node.up : node.down);
                 }
 
                 if (currentStage == way) return;
+
+                var previousStage = currentStage;
                 currentStage = way;
 
-                transform.DOMove(stageTransforms[currentStage].position, duration);
+                transform.DOMove(stageObjects[currentStage].transform.position, duration);
 
                 moving = true;
                 camera.DOMove(
-                    new Vector3(stageTransforms[currentStage].position.x, stageTransforms[currentStage].position.y,
+                    new Vector3(stageObjects[currentStage].transform.position.x,
+                        stageObjects[currentStage].transform.position.y,
                         -10), 1f).OnComplete(
-                    () => { moving = false; });
+                    () =>
+                    {
+                        stageObjects[previousStage].transform.localScale = new Vector3(0.3f, 0.3f, 1f);
+                        stageObjects[previousStage].GetComponent<SpriteRenderer>().sprite = unSelectSprite;
+                
+                        stageObjects[currentStage].transform.localScale = new Vector3(0.4f, 0.4f, 1f);
+                        stageObjects[currentStage].GetComponent<SpriteRenderer>().sprite = selectSprite;
+                        
+                        moving = false;
+                    });
             }
         }
 
         public void OnSubmitPerformed(InputAction.CallbackContext ctx)
         {
             if (moving) return;
-            
+
             if (stagesUIView.escapePanelOn)
             {
-                StagesFinish.Instance.Submit();
+                IMenuSubmittable stagesFinish = StagesFinish.Instance;
+                stagesFinish.Submit();
             }
             else
             {
@@ -197,11 +211,12 @@ namespace Stages.Map
 
         public void OnEscapePerformed(InputAction.CallbackContext ctx)
         {
+            settingManager.Off();
             if (detailPanelOn)
             {
                 Escape();
             }
-            else if(stagesUIView.escapePanelOn)
+            else if (stagesUIView.escapePanelOn)
             {
                 stagesUIView.escapePanelOn = false;
             }

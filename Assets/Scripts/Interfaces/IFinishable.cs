@@ -1,13 +1,12 @@
-using System.Collections.Generic;
-using DG.Tweening;
+using Setting;
+using UI.Lobby;
 using UI.Stages;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 namespace Interfaces
 {
-    public interface IFinishable
+    public interface IFinishable: IMenuSubmittable
     {
         IEscapePanel view { get; set; }
         static SceneFinish Instance { get; }
@@ -19,15 +18,43 @@ namespace Interfaces
     {
         public IEscapePanel view { get; set; }
         public static SceneFinish Instance;
+        private SettingManager settingManager;
 
         public void Awake()
         {
             Instance = this;
         }
 
-        public abstract void Start();
+        public virtual void Start()
+        {
+            settingManager = SettingManager.Instance;
+        }
 
-        public abstract void Submit();
+        public void Submit()
+        {
+            Time.timeScale = 1f;
+
+            switch (view.escapeMenu)
+            {
+                case EscapeMenu.Resume:
+                    view.escapePanelOn = false;
+                    break;
+                case EscapeMenu.Settings:
+                    settingManager.On();
+                    break;
+                case EscapeMenu.Lobby:
+                    Do();
+                    break;
+                case EscapeMenu.Exit:
+                    Application.Quit();
+                    break;
+                default:
+                    Debug.LogError("Invalid stageEscape!");
+                    break;
+            }
+        }
+
+        protected abstract void Do();
         
         public void OnPointerClick(PointerEventData eventData)
         {

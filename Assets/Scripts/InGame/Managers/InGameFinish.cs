@@ -1,7 +1,5 @@
 using Interfaces;
 using UI.InGame;
-using UI.Stages;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace InGame.Managers
@@ -10,30 +8,13 @@ namespace InGame.Managers
     {
         public override void Start()
         {
+            base.Start();
             view = InGameUIView.Instance;
         }
 
-        public override void Submit()
+        protected override void Do()
         {
-            Time.timeScale = 1;
-
-            switch (view.stageEscape)
-            {
-                case StageEscape.Resume:
-                    view.escapePanelOn = false;
-                    break;
-                case StageEscape.Settings:
-                    break;
-                case StageEscape.Lobby:
-                    SceneManager.LoadScene("Stages");
-                    break;
-                case StageEscape.Exit:
-                    Application.Quit();
-                    break;
-                default:
-                    Debug.LogError("Invalid stageEscape!");
-                    break;
-            }
+            SceneManager.LoadScene("Stages");
         }
     }
 }

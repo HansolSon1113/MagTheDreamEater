@@ -51,7 +51,7 @@ namespace InGame.Notes
             isColliding = false;
         }
 
-        private void OnDestroy()
+        public void WrapUp()
         {
             eatAction.performed -= onEatPerformed;
             eatAction.Disable();
@@ -91,6 +91,7 @@ namespace InGame.Notes
         {
             if (!isColliding) return;
 
+            var animator = InGameMagAnimationManager.Instance;
             transform.DOKill();
             switch (lastEvent.actionType)
             {
@@ -99,6 +100,7 @@ namespace InGame.Notes
                     {
                         scoreManager.score += 2;
                         scoreManager.health++;
+                        animator.eat = true;
                     }
                     break;
                 case InputEvent.Type.Throw:
@@ -106,6 +108,7 @@ namespace InGame.Notes
                     {
                         scoreManager.score += 2;
                         scoreManager.health++;
+                        animator.thr = true;
                     }
                     break;
             }
