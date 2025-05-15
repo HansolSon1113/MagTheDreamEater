@@ -27,6 +27,7 @@ namespace UI.Lobby
         private const int STAGE_COUNT = 4;
         private Menu menu;
         private SettingManager settingManager;
+        [SerializeField] private GameObject handModePanel;
 
         private void Awake()
         {
@@ -54,12 +55,12 @@ namespace UI.Lobby
                     ISaveable saveData = GameDataContainer.gameData;
                     saveData.gameDataElements = new GameDataElements(STAGE_COUNT);
                     saveData.Save();
-                    SceneManager.LoadScene("Stages");
+                    handModePanel.SetActive(true);
                     break;
                 case Menu.Play:
                     ILoadable loadData = GameDataContainer.gameData;
                     loadData.Load();
-                    SceneManager.LoadScene("Stages");
+                    handModePanel.SetActive(true);
                     break;
                 case Menu.Settings:
                     settingManager.On();

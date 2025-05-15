@@ -1,5 +1,6 @@
 using DG.Tweening;
 using InGame.Managers;
+using SaveData;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,7 +13,8 @@ namespace InGame.Notes
         private System.Action<InputAction.CallbackContext> onEatPerformed;
         private System.Action<InputAction.CallbackContext> onThrowPerformed;
         private bool isColliding;
-        [SerializeField] private bool dream;
+        private GameObject collideObject;
+        private bool isDream;
 
         private struct InputEvent
         {
@@ -31,10 +33,13 @@ namespace InGame.Notes
         private void Awake()
         {
             scoreManager = ScoreManager.Instance;
-            
-            eatAction = InputSystem.actions.FindAction("Eat");
+
+            var handSetting = GameDataContainer.settingData.settingDataElements.handMode == HandMode.OneHand;
+            var eat = handSetting ? "Eat" : "Eat_TwoHand";
+            eatAction = InputSystem.actions.FindAction(eat);
             eatAction.Enable();
-            throwAction = InputSystem.actions.FindAction("Throw");
+            var thr = handSetting ? "Throw" : "Throw_TwoHand";
+            throwAction = InputSystem.actions.FindAction(thr);
             throwAction.Enable();
 
             lastEvent = new InputEvent { actionType = InputEvent.Type.None };
@@ -51,7 +56,7 @@ namespace InGame.Notes
             isColliding = false;
         }
 
-        public void WrapUp()
+        private void OnDestroy()
         {
             eatAction.performed -= onEatPerformed;
             eatAction.Disable();
@@ -61,59 +66,72 @@ namespace InGame.Notes
 
         private void OnAnyAction(InputEvent.Type type)
         {
+            var animator = InGameMagAnimationManager.Instance;
+            switch (type)
+            {
+                case InputEvent.Type.Eat:
+                    animator.eat = true;
+                    break;
+                case InputEvent.Type.Throw:
+                    animator.thr = true;
+                    break;
+            }
+            
             if (!isColliding) return;
-
             lastEvent.actionType = type;
-
             ProcessLastEvent();
             lastEvent.actionType = InputEvent.Type.None;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag("HitPoint"))
+            if (other.gameObject.CompareTag("DreamNote"))
             {
-                isColliding = true;
+                isDream = true;
             }
+            else if(other.gameObject.CompareTag("NightmareNote"))
+            {
+                isDream = false;
+            }
+            else
+            {
+                return;
+            }
+            
+            collideObject = other.gameObject;
+            isColliding = true;
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag("HitPoint"))
-            {
-                scoreManager.score--;
-                scoreManager.health--;
-                isColliding = false;
-            }
+            if (!other.gameObject.CompareTag("DreamNote") && !other.gameObject.CompareTag("NightmareNote")) return;
+            scoreManager.score--;
+            scoreManager.health--;
+            isColliding = false;
         }
 
         private void ProcessLastEvent()
         {
-            if (!isColliding) return;
-
-            var animator = InGameMagAnimationManager.Instance;
             transform.DOKill();
             switch (lastEvent.actionType)
             {
                 case InputEvent.Type.Eat:
-                    if (dream)
+                    if (isDream)
                     {
                         scoreManager.score += 2;
                         scoreManager.health++;
-                        animator.eat = true;
                     }
                     break;
                 case InputEvent.Type.Throw:
-                    if (!dream)
+                    if (!isDream)
                     {
                         scoreManager.score += 2;
                         scoreManager.health++;
-                        animator.thr = true;
                     }
                     break;
             }
 
-            Destroy(gameObject);
+            Destroy(collideObject);
         }
     }
 }

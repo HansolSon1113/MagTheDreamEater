@@ -1,4 +1,5 @@
 using Interfaces;
+using UI.Effects;
 using UI.InGame;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +15,7 @@ namespace InGame.Managers
 
         protected override void Do()
         {
-            SceneManager.LoadScene("Stages");
+            UIFadeEffect.Instance.FadeOut(() => { SceneManager.LoadScene("Stages"); });
         }
     }
 }

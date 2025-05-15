@@ -1,4 +1,5 @@
 using Interfaces;
+using UI.Effects;
 using UI.Stages;
 using UnityEngine.SceneManagement;
 
@@ -14,7 +15,10 @@ namespace Stages.Map
 
         protected override void Do()
         {
-            SceneManager.LoadScene("Lobby");
+            CircularEffect.Instance.CircularOut(() =>
+            {
+                SceneManager.LoadScene("Lobby");
+            });
         }
     }
 }

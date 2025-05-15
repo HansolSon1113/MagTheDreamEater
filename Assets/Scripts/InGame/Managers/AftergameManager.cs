@@ -1,6 +1,7 @@
 using System.Collections;
 using Interfaces;
 using SaveData;
+using UI.Effects;
 using UI.InGame;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -62,7 +63,7 @@ namespace InGame.Managers
 
         public void Escape()
         {
-            if(sceneEnd) SceneManager.LoadScene("Stages");
+            if(sceneEnd) UIFadeEffect.Instance.FadeOut(() => { SceneManager.LoadScene("Stages"); });
         }
     }
 }

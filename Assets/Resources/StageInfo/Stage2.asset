@@ -1,0 +1,588 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae9e89f53cb45d283b7c7e8fc7c3484, type: 3}
+  m_Name: Stage2
+  m_EditorClassIdentifier: 
+  entries:
+  - startTime: 0
+    endTime: 2
+    type: 0
+  - startTime: 1.7
+    endTime: 3.7
+    type: 0
+  - startTime: 2.1
+    endTime: 4.1
+    type: 0
+  - startTime: 2.6
+    endTime: 4.6
+    type: 0
+  - startTime: 4.4
+    endTime: 6.4
+    type: 0
+  - startTime: 4.8
+    endTime: 6.8
+    type: 0
+  - startTime: 5.3
+    endTime: 7.3
+    type: 0
+  - startTime: 7
+    endTime: 9
+    type: 0
+  - startTime: 7.5
+    endTime: 9.5
+    type: 0
+  - startTime: 8.1
+    endTime: 10.1
+    type: 0
+  - startTime: 9.3
+    endTime: 11.3
+    type: 0
+  - startTime: 9.7
+    endTime: 11.7
+    type: 0
+  - startTime: 10
+    endTime: 12
+    type: 0
+  - startTime: 10.4
+    endTime: 12.4
+    type: 0
+  - startTime: 12.4
+    endTime: 14.4
+    type: 0
+  - startTime: 12.8
+    endTime: 14.8
+    type: 0
+  - startTime: 13.3
+    endTime: 15.3
+    type: 0
+  - startTime: 15
+    endTime: 17
+    type: 0
+  - startTime: 15.5
+    endTime: 17.5
+    type: 0
+  - startTime: 16
+    endTime: 18
+    type: 0
+  - startTime: 17.7
+    endTime: 19.7
+    type: 0
+  - startTime: 18.1
+    endTime: 20.1
+    type: 0
+  - startTime: 18.7
+    endTime: 20.7
+    type: 0
+  - startTime: 20.3
+    endTime: 22.3
+    type: 0
+  - startTime: 20.8
+    endTime: 22.8
+    type: 0
+  - startTime: 21.3
+    endTime: 23.3
+    type: 0
+  - startTime: 22.5
+    endTime: 24.5
+    type: 0
+  - startTime: 23
+    endTime: 25
+    type: 0
+  - startTime: 23.6
+    endTime: 25.6
+    type: 0
+  - startTime: 24
+    endTime: 26
+    type: 0
+  - startTime: 25.2
+    endTime: 27.2
+    type: 0
+  - startTime: 25.7
+    endTime: 27.7
+    type: 0
+  - startTime: 26.3
+    endTime: 28.3
+    type: 0
+  - startTime: 27.9
+    endTime: 29.9
+    type: 0
+  - startTime: 28.3
+    endTime: 30.3
+    type: 0
+  - startTime: 29
+    endTime: 31
+    type: 0
+  - startTime: 29.3
+    endTime: 31.3
+    type: 0
+  - startTime: 31
+    endTime: 33
+    type: 0
+  - startTime: 31.5
+    endTime: 33.5
+    type: 0
+  - startTime: 31.9
+    endTime: 33.9
+    type: 0
+  - startTime: 33.2
+    endTime: 35.2
+    type: 0
+  - startTime: 33.7
+    endTime: 35.7
+    type: 0
+  - startTime: 34.3
+    endTime: 36.3
+    type: 0
+  - startTime: 34.6
+    endTime: 36.6
+    type: 0
+  - startTime: 35.6
+    endTime: 37.6
+    type: 0
+  - startTime: 35.8
+    endTime: 37.8
+    type: 0
+  - startTime: 36.3
+    endTime: 38.3
+    type: 0
+  - startTime: 36.6
+    endTime: 38.6
+    type: 0
+  - startTime: 37
+    endTime: 39
+    type: 0
+  - startTime: 38.3
+    endTime: 40.3
+    type: 0
+  - startTime: 38.6
+    endTime: 40.6
+    type: 0
+  - startTime: 39
+    endTime: 41
+    type: 0
+  - startTime: 39.4
+    endTime: 41.4
+    type: 0
+  - startTime: 40
+    endTime: 42
+    type: 0
+  - startTime: 41.2
+    endTime: 43.2
+    type: 0
+  - startTime: 41.6
+    endTime: 43.6
+    type: 0
+  - startTime: 42
+    endTime: 44
+    type: 0
+  - startTime: 42.3
+    endTime: 44.3
+    type: 0
+  - startTime: 42.6
+    endTime: 44.6
+    type: 0
+  - startTime: 44.8
+    endTime: 46.8
+    type: 0
+  - startTime: 45.4
+    endTime: 47.4
+    type: 0
+  - startTime: 47
+    endTime: 49
+    type: 0
+  - startTime: 47.5
+    endTime: 49.5
+    type: 0
+  - startTime: 50.6
+    endTime: 52.6
+    type: 0
+  - startTime: 52.1
+    endTime: 54.1
+    type: 0
+  - startTime: 52.3
+    endTime: 54.3
+    type: 0
+  - startTime: 52.7
+    endTime: 54.7
+    type: 0
+  - startTime: 53.3
+    endTime: 55.3
+    type: 0
+  - startTime: 55
+    endTime: 57
+    type: 0
+  - startTime: 55.5
+    endTime: 57.5
+    type: 0
+  - startTime: 56
+    endTime: 58
+    type: 0
+  - startTime: 58.2
+    endTime: 60.2
+    type: 0
+  - startTime: 58.6
+    endTime: 60.6
+    type: 0
+  - startTime: 60.4
+    endTime: 62.4
+    type: 0
+  - startTime: 60.8
+    endTime: 62.8
+    type: 0
+  - startTime: 61.3
+    endTime: 63.3
+    type: 0
+  - startTime: 62.5
+    endTime: 64.5
+    type: 0
+  - startTime: 62.9
+    endTime: 64.9
+    type: 0
+  - startTime: 63.3
+    endTime: 65.3
+    type: 0
+  - startTime: 63.6
+    endTime: 65.6
+    type: 0
+  - startTime: 64
+    endTime: 66
+    type: 0
+  - startTime: 65.6
+    endTime: 67.6
+    type: 0
+  - startTime: 65.9
+    endTime: 67.9
+    type: 0
+  - startTime: 66.2
+    endTime: 68.2
+    type: 0
+  - startTime: 66.6
+    endTime: 68.6
+    type: 0
+  - startTime: 68.4
+    endTime: 70.4
+    type: 0
+  - startTime: 68.6
+    endTime: 70.6
+    type: 0
+  - startTime: 68.8
+    endTime: 70.8
+    type: 0
+  - startTime: 69
+    endTime: 71
+    type: 0
+  - startTime: 69.2
+    endTime: 71.2
+    type: 0
+  - startTime: 69.7
+    endTime: 71.7
+    type: 0
+  - startTime: 70.9
+    endTime: 72.9
+    type: 0
+  - startTime: 71.1
+    endTime: 73.1
+    type: 0
+  - startTime: 71.3
+    endTime: 73.3
+    type: 0
+  - startTime: 71.5
+    endTime: 73.5
+    type: 0
+  - startTime: 71.7
+    endTime: 73.7
+    type: 0
+  - startTime: 72
+    endTime: 74
+    type: 0
+  - startTime: 72.4
+    endTime: 74.4
+    type: 0
+  - startTime: 72.7
+    endTime: 74.7
+    type: 0
+  - startTime: 73
+    endTime: 75
+    type: 0
+  - startTime: 73.2
+    endTime: 75.2
+    type: 0
+  - startTime: 73.8
+    endTime: 75.8
+    type: 0
+  - startTime: 74.2
+    endTime: 76.2
+    type: 0
+  - startTime: 74.4
+    endTime: 76.4
+    type: 0
+  - startTime: 74.6
+    endTime: 76.6
+    type: 0
+  - startTime: 76.2
+    endTime: 78.2
+    type: 0
+  - startTime: 76.45
+    endTime: 78.45
+    type: 0
+  - startTime: 76.7
+    endTime: 78.7
+    type: 0
+  - startTime: 77
+    endTime: 79
+    type: 0
+  - startTime: 77.3
+    endTime: 79.3
+    type: 0
+  - startTime: 77.4
+    endTime: 79.4
+    type: 0
+  - startTime: 79
+    endTime: 81
+    type: 0
+  - startTime: 79.6
+    endTime: 81.6
+    type: 0
+  - startTime: 80
+    endTime: 82
+    type: 0
+  - startTime: 81.6
+    endTime: 83.6
+    type: 0
+  - startTime: 81.8
+    endTime: 83.8
+    type: 0
+  - startTime: 82
+    endTime: 84
+    type: 0
+  - startTime: 82.2
+    endTime: 84.2
+    type: 0
+  - startTime: 82.5
+    endTime: 84.5
+    type: 0
+  - startTime: 82.7
+    endTime: 84.7
+    type: 0
+  - startTime: 83.2
+    endTime: 85.2
+    type: 0
+  - startTime: 83.5
+    endTime: 85.5
+    type: 0
+  - startTime: 84
+    endTime: 86
+    type: 0
+  - startTime: 84.3
+    endTime: 86.3
+    type: 0
+  - startTime: 84.9
+    endTime: 86.9
+    type: 0
+  - startTime: 86.5
+    endTime: 88.5
+    type: 0
+  - startTime: 86.7
+    endTime: 88.7
+    type: 0
+  - startTime: 87
+    endTime: 89
+    type: 0
+  - startTime: 87.3
+    endTime: 89.3
+    type: 0
+  - startTime: 87.6
+    endTime: 89.6
+    type: 0
+  - startTime: 88
+    endTime: 90
+    type: 0
+  - startTime: 89.1
+    endTime: 91.1
+    type: 0
+  - startTime: 89.4
+    endTime: 91.4
+    type: 0
+  - startTime: 89.7
+    endTime: 91.7
+    type: 0
+  - startTime: 90
+    endTime: 92
+    type: 0
+  - startTime: 90.3
+    endTime: 92.3
+    type: 0
+  - startTime: 91.8
+    endTime: 93.8
+    type: 0
+  - startTime: 92.2
+    endTime: 94.2
+    type: 0
+  - startTime: 92.6
+    endTime: 94.6
+    type: 0
+  - startTime: 93.1
+    endTime: 95.1
+    type: 0
+  - startTime: 93.3
+    endTime: 95.3
+    type: 0
+  - startTime: 94.9
+    endTime: 96.9
+    type: 0
+  - startTime: 95.5
+    endTime: 97.5
+    type: 0
+  - startTime: 96
+    endTime: 98
+    type: 0
+  - startTime: 97.1
+    endTime: 99.1
+    type: 0
+  - startTime: 97.7
+    endTime: 99.7
+    type: 0
+  - startTime: 98
+    endTime: 100
+    type: 0
+  - startTime: 98.3
+    endTime: 100.3
+    type: 0
+  - startTime: 98.6
+    endTime: 100.6
+    type: 0
+  - startTime: 99.7
+    endTime: 101.7
+    type: 0
+  - startTime: 99.9
+    endTime: 101.9
+    type: 0
+  - startTime: 100.2
+    endTime: 102.2
+    type: 0
+  - startTime: 100.4
+    endTime: 102.4
+    type: 0
+  - startTime: 100.6
+    endTime: 102.6
+    type: 0
+  - startTime: 100.9
+    endTime: 102.9
+    type: 0
+  - startTime: 102.3
+    endTime: 104.3
+    type: 0
+  - startTime: 102.5
+    endTime: 104.5
+    type: 0
+  - startTime: 103
+    endTime: 105
+    type: 0
+  - startTime: 103.3
+    endTime: 105.3
+    type: 0
+  - startTime: 103.6
+    endTime: 105.6
+    type: 0
+  - startTime: 104
+    endTime: 106
+    type: 0
+  - startTime: 105
+    endTime: 107
+    type: 0
+  - startTime: 105.3
+    endTime: 107.3
+    type: 0
+  - startTime: 105.6
+    endTime: 107.6
+    type: 0
+  - startTime: 105.9
+    endTime: 107.9
+    type: 0
+  - startTime: 106.3
+    endTime: 108.3
+    type: 0
+  - startTime: 106.7
+    endTime: 108.7
+    type: 0
+  - startTime: 108.3
+    endTime: 110.3
+    type: 0
+  - startTime: 108.8
+    endTime: 110.8
+    type: 0
+  - startTime: 109.4
+    endTime: 111.4
+    type: 0
+  - startTime: 111.1
+    endTime: 113.1
+    type: 0
+  - startTime: 111.5
+    endTime: 113.5
+    type: 0
+  - startTime: 111.9
+    endTime: 113.9
+    type: 0
+  - startTime: 114.6
+    endTime: 116.6
+    type: 0
+  - startTime: 116
+    endTime: 118
+    type: 0
+  - startTime: 116.4
+    endTime: 118.4
+    type: 0
+  - startTime: 117.3
+    endTime: 119.3
+    type: 0
+  - startTime: 118.9
+    endTime: 120.9
+    type: 0
+  - startTime: 119.5
+    endTime: 121.5
+    type: 0
+  - startTime: 120
+    endTime: 122
+    type: 0
+  - startTime: 121.6
+    endTime: 123.6
+    type: 0
+  - startTime: 122.1
+    endTime: 124.1
+    type: 0
+  - startTime: 122.6
+    endTime: 124.6
+    type: 0
+  - startTime: 124.8
+    endTime: 126.8
+    type: 0
+  - startTime: 125.3
+    endTime: 127.3
+    type: 0
+  - startTime: 126.3
+    endTime: 128.3
+    type: 0
+  - startTime: 126.5
+    endTime: 128.5
+    type: 0
+  - startTime: 126.7
+    endTime: 128.7
+    type: 0
+  - startTime: 126.9
+    endTime: 128.9
+    type: 0
+  - startTime: 127.3
+    endTime: 129.3
+    type: 0
+  - startTime: 128
+    endTime: 130
+    type: 0

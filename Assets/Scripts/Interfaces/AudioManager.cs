@@ -12,7 +12,8 @@ namespace Interfaces
 
     public class AudioManager : MonoBehaviour, IVolumeContainer
     {
-        [SerializeField] private AudioSource popAudioSource, musicAudioSource;
+        [SerializeField] private AudioSource popAudioSource;
+        public AudioSource musicAudioSource;
         private SettingManager volumeContainer;
         public static AudioManager Instance;
 

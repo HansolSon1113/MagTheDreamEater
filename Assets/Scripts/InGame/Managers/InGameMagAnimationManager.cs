@@ -6,14 +6,15 @@ namespace InGame.Managers
     {
         private Animator animator;
         public static InGameMagAnimationManager Instance;
-        private bool _eat, _thr;
+        private bool isAnimationPlaying = false;
+        private string queuedAnimation = null;
 
         public bool eat
         {
             set
             {
-                _eat = value;
-                animator.SetBool("Eat", value);
+                var clip = value ? "InGameMagEat" : "InGameMagWalk";
+                PlayAnimation(clip);
             }
         }
 
@@ -21,8 +22,8 @@ namespace InGame.Managers
         {
             set
             {
-                _thr = value;
-                animator.SetBool("Throw", value);
+                var clip = value ? "InGameMagThrow" : "InGameMagWalk";
+                PlayAnimation(clip);
             }
         }
 
@@ -38,15 +39,31 @@ namespace InGame.Managers
 
         private void Update()
         {
-            if (_eat && !animator.GetCurrentAnimatorStateInfo(0).IsName("Eat"))
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("InGameMagWalk") ||
+                !(animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f)) return;
+            isAnimationPlaying = false;
+            if (queuedAnimation != null)
             {
-                eat = false;
+                animator.Play(queuedAnimation, 0, 0f);
+                queuedAnimation = null;
+                isAnimationPlaying = true;
             }
-
-            if (_thr && !animator.GetCurrentAnimatorStateInfo(0).IsName("Throw"))
+            else
             {
-                thr = false;
+                animator.Play("InGameMagWalk");
             }
+        }
+        
+        private void PlayAnimation(string clipName)
+        {
+            if (isAnimationPlaying && !clipName.Equals("InGameMagWalk"))
+            {
+                queuedAnimation = clipName;
+                return;
+            }
+            
+            animator.Play(clipName, 0, 0f);
+            isAnimationPlaying = !clipName.Equals("InGameMagWalk");
         }
     }
 }

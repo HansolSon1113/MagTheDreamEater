@@ -9,6 +9,7 @@ namespace Setting
         public SettingData settingData;
         public static SettingManager Instance;
         public IVolumeContainer audioManager;
+        [HideInInspector] public bool settingPanelOn;
 
         public float totalVolume
         {
@@ -26,6 +27,12 @@ namespace Setting
         {
             get => settingData.settingDataElements.musicVolume;
             set => settingData.settingDataElements.musicVolume = audioManager.musicVolume = value;
+        }
+
+        public HandMode handMode
+        {
+            get => settingData.settingDataElements.handMode;
+            set => settingData.settingDataElements.handMode = value;
         }
 
         private void Awake()
@@ -48,12 +55,14 @@ namespace Setting
 
         public void On()
         {
+            settingPanelOn = true;
             Time.timeScale = 0f;
             gameObject.SetActive(true);
         }
         
         public void Off()
         {
+            settingPanelOn = false;
             Time.timeScale = 1f;
             gameObject.SetActive(false);
         }

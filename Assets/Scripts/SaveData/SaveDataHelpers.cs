@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
@@ -68,20 +69,29 @@ namespace SaveData
 
         public void Load()
         {
-            if (!File.Exists(FilePath)) return;
+            if (File.Exists(FilePath))
+            {
+                using var fs = new FileStream(FilePath, FileMode.Open, FileAccess.Read);
+                var ivLength = fs.ReadByte();
+                var iv = new byte[ivLength];
+                fs.Read(iv, 0, ivLength);
 
-            using FileStream fs = new FileStream(FilePath, FileMode.Open, FileAccess.Read);
-            var ivLength = fs.ReadByte();
-            var iv = new byte[ivLength];
-            fs.Read(iv, 0, ivLength);
+                var cipher = new byte[fs.Length - 1 - ivLength];
+                fs.Read(cipher, 0, cipher.Length);
 
-            var cipher = new byte[fs.Length - 1 - ivLength];
-            fs.Read(cipher, 0, cipher.Length);
+                var aesUtil = new AesUtil();
+                var json = aesUtil.DecryptString(cipher, iv);
 
-            var aesUtil = new AesUtil();
-            var json = aesUtil.DecryptString(cipher, iv);
+                gameDataElements = JsonUtility.FromJson<GameDataElements>(json);
+            }
+            else
+            {
+                const string folderPath = "Assets/Resources/StageInfo/";
+                var assetPaths = Directory.GetFiles(folderPath, "*.asset", SearchOption.TopDirectoryOnly);
 
-            gameDataElements = JsonUtility.FromJson<GameDataElements>(json);
+                var cnt = assetPaths.Count();
+                gameDataElements = new GameDataElements(cnt);
+            }
         }
     }
 

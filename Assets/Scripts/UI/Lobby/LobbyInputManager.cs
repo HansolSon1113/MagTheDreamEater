@@ -13,19 +13,17 @@ namespace UI.Lobby
         Menu menu { get; set; }
     }
     
-    public class LobbyInputManager : MonoBehaviour, IMovable, ISubmittable, IEscapable, IPointerClickHandler, IMenuContainer
+    public class LobbyInputManager : MonoBehaviour, IMovable, ISubmittable, IPointerClickHandler, IMenuContainer
     {
         private const int cnt = 4;
         private InputActionMap menuMap;
         public InputAction moveAction { get; set; }
         public InputAction submitAction { get; set; }
-        public InputAction escapeAction { get; set; }
         private Menu _menu = Menu.NewStart;
         public LobbyFinish lobbyFinish;
         public static LobbyInputManager Instance;
         [SerializeField] private List<Transform> menuTransforms = new List<Transform>();
         [SerializeField] private float duration;
-        private SettingManager settingManager;
 
         public Menu menu
         {
@@ -50,53 +48,36 @@ namespace UI.Lobby
             submitAction = InputSystem.actions.FindAction("Submit");
             submitAction.performed += OnSubmitPerformed;
             submitAction.Enable();
-            escapeAction = InputSystem.actions.FindAction("Escape");
-            escapeAction.performed += OnEscapePerformed;
-            escapeAction.Enable();
         }
 
         private void Start()
         {
             lobbyFinish = LobbyFinish.Instance;
-            settingManager = SettingManager.Instance;
         }
 
         public void OnDestroy()
         {
             moveAction.performed -= OnMovePerformed;
             submitAction.performed -= OnSubmitPerformed;
-            escapeAction.performed -= OnEscapePerformed;
             
             moveAction.Disable();
             submitAction.Disable();
-            escapeAction.Disable();
             
             menuMap.Disable();
         }
 
-        public void OnEscapePerformed(InputAction.CallbackContext ctx)
-        {
-            Escape();
-        }
-
-        public void Escape()
-        {
-            settingManager.Off();
-        }
-
         public void OnMovePerformed(InputAction.CallbackContext ctx)
         {
-            var value = ctx.ReadValue<float>();
-            Move(new Vector2(value, 0));
+            var value = ctx.ReadValue<Vector2>();
+            Move(value);
         }
 
         public void Move(Vector2 value)
         {
-            var delta = value.x;
-            if (Mathf.Approximately(delta, 0f)) return;
+            if (Mathf.Approximately(value.x, 0f) && Mathf.Approximately(value.y, 0)) return;
 
             var curr = (int)_menu;
-            var next = (curr + (delta > 0 ? 1 : -1) + cnt) % cnt;
+            var next = (curr + (value.x > 0 || value.y > 0 ? -1 : 1) + cnt) % cnt;
             menu = (Menu)next;
 
             AnimateTo(_menu);

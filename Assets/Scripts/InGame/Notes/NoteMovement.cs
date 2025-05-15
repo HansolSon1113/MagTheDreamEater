@@ -24,7 +24,6 @@ namespace InGame.Notes
             if (lastNote || scoreManager.health <= 0)
             {
                 ScoreManager.Instance.Stop();
-                GetComponent<NoteCollision>().WrapUp();
             }
         }
     }

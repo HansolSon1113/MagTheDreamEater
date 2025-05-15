@@ -19,6 +19,16 @@ namespace InGame.Managers
         [SerializeField] private Transform noteSpawnPoint, noteDestination, noteEndPoint;
         private ScoreManager scoreManager;
         private float ratio;
+        [SerializeField] private AudioManager audioManager;
+
+        public AudioClip music
+        {
+            set
+            {
+                audioManager.musicAudioSource.clip = value;
+                audioManager.musicAudioSource.Play();
+            }
+        }
         
         private void Start()
         {

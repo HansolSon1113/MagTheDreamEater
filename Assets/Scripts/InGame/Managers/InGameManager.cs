@@ -53,7 +53,7 @@ namespace InGame.Managers
 
         public void OnMovePerformed(InputAction.CallbackContext ctx)
         {
-            if (!inGameUIView.escapePanelOn) return;
+            if (!inGameUIView.escapePanelOn || settingManager.settingPanelOn) return;
             var value = ctx.ReadValue<Vector2>();
             Move(value);
         }

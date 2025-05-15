@@ -52,6 +52,15 @@ namespace Interfaces
             set
             {
                 Time.timeScale = value ? 0 : 1;
+                var music = AudioManager.Instance.musicAudioSource;
+                if (value)
+                {
+                    music.Pause();
+                }
+                else
+                {
+                    music.Play();
+                }
                 _escapePanelOn = value;
                 escapePanel.SetActive(value);
             }
