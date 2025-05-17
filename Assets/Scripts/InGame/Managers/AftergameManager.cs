@@ -17,6 +17,7 @@ namespace InGame.Managers
         [SerializeField] private AfterGameUIView afterGameUIView;
         private bool sceneEnd = false;
         [SerializeField] private float duration = 10f;
+        [SerializeField] private GameObject gameOverPanel;
 
         public void Awake()
         {
@@ -31,15 +32,25 @@ namespace InGame.Managers
         private void Start()
         {
             var data = gameData.gameDataElements;
-            var info = GameDataContainer.currentStage;
-        
-            afterGameUIView.index = data.currentStage;
-            afterGameUIView.name = info.stageName;
-            afterGameUIView.description = info.stageDescription;
-            afterGameUIView.latestScore = data.latestScores[data.currentStage];
-            afterGameUIView.highestScore = data.highestScores[data.currentStage];
+            if (data.latestHealth[data.currentStage] <= 0)
+            {
+                gameOverPanel.SetActive(true);
+                sceneEnd = true;
+            }
+            else
+            {
+                var info = GameDataContainer.currentStage;
 
-            StartCoroutine(EndScene());
+                afterGameUIView.index = data.currentStage;
+                afterGameUIView.name = info.stageName;
+                afterGameUIView.description = info.stageDescription;
+                afterGameUIView.latestScore = data.latestScores[data.currentStage];
+                afterGameUIView.highestScore = data.highestScores[data.currentStage];
+                afterGameUIView.latestHealth = data.latestHealth[data.currentStage];
+                afterGameUIView.highestHealth = data.highestHealth[data.currentStage];
+
+                StartCoroutine(EndScene());
+            }
         }
 
         private IEnumerator EndScene()

@@ -24,7 +24,7 @@ namespace UI.Lobby
     public class LobbyFinish: MonoBehaviour, IMenuSubmittable
     {
         public static LobbyFinish Instance;
-        private const int STAGE_COUNT = 4;
+        private const int STAGE_COUNT = 5;
         private Menu menu;
         private SettingManager settingManager;
         [SerializeField] private GameObject handModePanel;

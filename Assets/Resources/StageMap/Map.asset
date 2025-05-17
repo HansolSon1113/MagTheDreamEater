@@ -38,6 +38,13 @@ MonoBehaviour:
     stageName: D
     stageDescription: JKL
     left: 1
-    right: 3
+    right: 4
     up: 3
     down: 3
+  - stageIndex: 4
+    stageName: E
+    stageDescription: AAA
+    left: 3
+    right: 4
+    up: 4
+    down: 4

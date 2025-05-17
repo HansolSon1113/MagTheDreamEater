@@ -5,11 +5,16 @@ using UnityEngine.UI;
 
 namespace UI.Effects
 {
-    public class UIFadeEffect : MonoBehaviour
+    public class UIFadeEffect : FadeEffect
+    {
+        protected override void Do() {}
+    }
+    
+    public abstract class FadeEffect : MonoBehaviour
     {
         [SerializeField] private float duration;
         private Image image;
-        public static UIFadeEffect Instance { get; private set; }
+        public static FadeEffect Instance { get; private set; }
 
         private void Awake()
         {
@@ -28,8 +33,11 @@ namespace UI.Effects
             image.DOFade(0, duration).SetEase(Ease.InQuad).OnComplete(() =>
             {
                 gameObject.SetActive(false);
+                Do();
             });
         }
+
+        protected abstract void Do();
 
         public void FadeOut(Action action)
         {

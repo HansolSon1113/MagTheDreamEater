@@ -141,7 +141,7 @@ namespace Stages.Map
                 else
                 {
                     if (moving) return;
-
+                    
                     var node = stageMap.nodes[currentStage];
 
                     var way = currentStage;
@@ -154,12 +154,12 @@ namespace Stages.Map
                     {
                         way = int.Parse(value.y > 0 ? node.up : node.down);
                     }
-
+                    
                     if (currentStage == way) return;
-
+                    
                     var previousStage = currentStage;
                     currentStage = way;
-
+                    
                     if (stageObjects[currentStage].transform.position.x > transform.position.x)
                     {
                         transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -168,9 +168,8 @@ namespace Stages.Map
                     {
                         transform.rotation = Quaternion.Euler(0, 0, 0);
                     }
-
                     transform.DOMove(stageObjects[currentStage].transform.position, duration);
-
+                    
                     moving = true;
                     camera.DOMove(
                         new Vector3(stageObjects[currentStage].transform.position.x,
@@ -211,8 +210,12 @@ namespace Stages.Map
             {
                 if (stagesUIView.stageMenu == StageMenu.Start)
                 {
+                    OnDestroy();
                     GameDataContainer.currentStage = stageMap.nodes[currentStage];
-                    SceneManager.LoadScene("InGame");
+                    CircularEffect.Instance.CircularOut(() =>
+                    {
+                        SceneManager.LoadScene("InGame");
+                    });
                 }
                 else
                 {

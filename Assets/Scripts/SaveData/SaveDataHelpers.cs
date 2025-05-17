@@ -36,6 +36,8 @@ namespace SaveData
         public List<int> highestScores;
         public List<float> latestTimes;
         public List<float> fastestTimes;
+        public List<int> latestHealth;
+        public List<int> highestHealth;
         public Skins currentSkin = Skins.Basic;
         public List<Skins> purchasedSkins = new() { Skins.Basic };
         
@@ -46,6 +48,8 @@ namespace SaveData
             highestScores = new List<int>(new int[stageCount]);
             latestTimes = new List<float>(new float[stageCount]);
             fastestTimes = new List<float>(new float[stageCount]);
+            latestHealth = new List<int>(new int[stageCount]);
+            highestHealth = new List<int>(new int[stageCount]);
         }
     }
 

@@ -12,7 +12,7 @@ namespace UI.Lobby
     {
         Menu menu { get; set; }
     }
-    
+
     public class LobbyInputManager : MonoBehaviour, IMovable, ISubmittable, IPointerClickHandler, IMenuContainer
     {
         private const int cnt = 4;
@@ -24,6 +24,7 @@ namespace UI.Lobby
         public static LobbyInputManager Instance;
         [SerializeField] private List<Transform> menuTransforms = new List<Transform>();
         [SerializeField] private float duration;
+        private SettingManager settingManager;
 
         public Menu menu
         {
@@ -38,7 +39,10 @@ namespace UI.Lobby
         public void Awake()
         {
             Instance = this;
-            
+        }
+
+        public void Assign()
+        {
             menuMap = InputSystem.actions.FindActionMap("Lobby");
             menuMap.Enable();
 
@@ -53,16 +57,17 @@ namespace UI.Lobby
         private void Start()
         {
             lobbyFinish = LobbyFinish.Instance;
+            settingManager = SettingManager.Instance;
         }
 
         public void OnDestroy()
         {
             moveAction.performed -= OnMovePerformed;
             submitAction.performed -= OnSubmitPerformed;
-            
+
             moveAction.Disable();
             submitAction.Disable();
-            
+
             menuMap.Disable();
         }
 
@@ -74,7 +79,7 @@ namespace UI.Lobby
 
         public void Move(Vector2 value)
         {
-            if (Mathf.Approximately(value.x, 0f) && Mathf.Approximately(value.y, 0)) return;
+            if ((Mathf.Approximately(value.x, 0f) && Mathf.Approximately(value.y, 0)) || settingManager.settingPanelOn) return;
 
             var curr = (int)_menu;
             var next = (curr + (value.x > 0 || value.y > 0 ? -1 : 1) + cnt) % cnt;
@@ -87,7 +92,7 @@ namespace UI.Lobby
         {
             Submit();
         }
-        
+
         public void OnPointerClick(PointerEventData eventData)
         {
             lobbyFinish.Finish(menu);
@@ -95,6 +100,7 @@ namespace UI.Lobby
 
         public void Submit()
         {
+            if (settingManager.settingPanelOn) return;
             lobbyFinish.Finish(_menu);
         }
 

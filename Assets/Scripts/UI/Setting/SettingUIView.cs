@@ -10,7 +10,7 @@ using UnityEngine.EventSystems;
 
 namespace UI.Setting
 {
-    public class SettingUIView : MonoBehaviour, IMovable, IEscapable, IPointerClickHandler
+    public class SettingUIView : MonoBehaviour, IMovable, IEscapable
     {
         [SerializeField] private Slider totalVolumeSlider, popVolumeSlider, musicVolumeSlider;
         [SerializeField] private TMP_InputField totalVolumeField, popVolumeField, musicVolumeField;
@@ -158,11 +158,6 @@ namespace UI.Setting
             currentFieldIndex = index;
             inputFields[currentFieldIndex].ActivateInputField();
             inputFields[currentFieldIndex].Select();
-        }
-
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            settingManager.Off();
         }
 
         private void UnselectCurrentField()

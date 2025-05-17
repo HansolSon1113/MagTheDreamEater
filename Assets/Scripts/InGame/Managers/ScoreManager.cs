@@ -1,5 +1,6 @@
 using System.Collections;
 using SaveData;
+using UI.Effects;
 using UI.InGame;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -35,7 +36,7 @@ namespace InGame.Managers
             get => _health;
             set
             {
-                if (_health == value) return;
+                if (_health == value || health < 0) return;
             
                 _health = value;
                 inGameUIView.health = value;
@@ -62,6 +63,8 @@ namespace InGame.Managers
         {
             inGameUIView = InGameUIView.Instance;
             health = 100;
+
+            inGameUIView.stageNum = int.Parse(GameDataContainer.currentStage.stageIndex);
         }
 
         private void Update()
@@ -85,7 +88,10 @@ namespace InGame.Managers
             
             yield return new WaitForSeconds(5f);
 
-            SceneManager.LoadScene("AfterGame");
+            FadeEffect.Instance.FadeOut(() =>
+            {
+                SceneManager.LoadScene("AfterGame");
+            });
         }
 
         private void OnDestroy()
@@ -104,6 +110,11 @@ namespace InGame.Managers
             if (data.fastestTimes[data.currentStage] > _stageTime || data.fastestTimes[data.currentStage] == 0)
             {
                 data.fastestTimes[data.currentStage] = _stageTime;
+            }
+            data.latestHealth[data.currentStage] = _health;
+            if (data.highestHealth[data.currentStage] < _health)
+            {
+                data.highestHealth[data.currentStage] = _health;
             }
                 
             gameData.Save();

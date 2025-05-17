@@ -23,6 +23,8 @@ namespace UI.Lobby
 
         private void Start()
         {
+            LobbyInputManager.Instance.OnDestroy();
+            
             moveAction = InputSystem.actions.FindAction("Move");
             moveAction.performed += OnMovePerformed;
             moveAction.Enable();

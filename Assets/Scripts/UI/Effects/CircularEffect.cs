@@ -21,7 +21,7 @@ namespace UI.Effects
 
         public void CircularIn()
         {
-            transform.DOScale(new Vector3(30, 30, 1), duration).SetEase(Ease.InQuad).OnComplete(() =>
+            transform.DOScale(new Vector3(1, 1, 1), duration).SetEase(Ease.InQuad).OnComplete(() =>
             {
                 gameObject.SetActive(false);
             });
@@ -30,7 +30,7 @@ namespace UI.Effects
         public void CircularOut(Action action)
         {
             gameObject.SetActive(true);
-            transform.DOScale(new Vector3(30, 30, 1), duration).SetEase(Ease.InQuad).OnComplete(() => action?.Invoke());
+            transform.DOScale(new Vector3(0.001f, 0.001f, 1), duration).SetEase(Ease.InQuad).OnComplete(() => action?.Invoke());
         }
     }
 }

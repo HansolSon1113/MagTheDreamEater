@@ -1,3 +1,4 @@
+using Setting;
 using UnityEngine;
 
 namespace InGame.Managers
@@ -7,13 +8,13 @@ namespace InGame.Managers
         private Animator animator;
         public static InGameMagAnimationManager Instance;
         private bool isAnimationPlaying = false;
-        private string queuedAnimation = null;
+        private string queuedAnimation = null, animWalk = "InGameMagWalk", animEat = "InGameMagEat", animThrow = "InGameMagThrow";
 
         public bool eat
         {
             set
             {
-                var clip = value ? "InGameMagEat" : "InGameMagWalk";
+                var clip = value ? animEat : animWalk;
                 PlayAnimation(clip);
             }
         }
@@ -22,7 +23,7 @@ namespace InGame.Managers
         {
             set
             {
-                var clip = value ? "InGameMagThrow" : "InGameMagWalk";
+                var clip = value ? animThrow : animWalk;
                 PlayAnimation(clip);
             }
         }
@@ -35,11 +36,21 @@ namespace InGame.Managers
         private void Start()
         {
             animator = GetComponent<Animator>();
+
+            var ee = EasterEggManager.Instance.easterEggOn;
+            if (ee)
+            {
+                animWalk = "InGameEEWalk";
+                animEat = "InGameEEEat";
+                animThrow = "InGameEEThrow";
+                
+                animator.Play(animWalk);
+            }
         }
 
         private void Update()
         {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("InGameMagWalk") ||
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName(animWalk) ||
                 !(animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f)) return;
             isAnimationPlaying = false;
             if (queuedAnimation != null)
@@ -50,20 +61,20 @@ namespace InGame.Managers
             }
             else
             {
-                animator.Play("InGameMagWalk");
+                animator.Play(animWalk);
             }
         }
         
         private void PlayAnimation(string clipName)
         {
-            if (isAnimationPlaying && !clipName.Equals("InGameMagWalk"))
+            if (isAnimationPlaying && !clipName.Equals(animWalk))
             {
                 queuedAnimation = clipName;
                 return;
             }
             
             animator.Play(clipName, 0, 0f);
-            isAnimationPlaying = !clipName.Equals("InGameMagWalk");
+            isAnimationPlaying = !clipName.Equals(animWalk);
         }
     }
 }

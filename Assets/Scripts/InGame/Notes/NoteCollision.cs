@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using InGame.Managers;
 using SaveData;
@@ -12,8 +13,7 @@ namespace InGame.Notes
         private InputAction eatAction, throwAction;
         private System.Action<InputAction.CallbackContext> onEatPerformed;
         private System.Action<InputAction.CallbackContext> onThrowPerformed;
-        private bool isColliding;
-        private GameObject collideObject;
+        private Queue<GameObject> collidedObjects = new Queue<GameObject>();
         private bool isDream;
 
         private struct InputEvent
@@ -29,7 +29,7 @@ namespace InGame.Notes
         }
 
         private InputEvent lastEvent;
-
+        
         private void Awake()
         {
             scoreManager = ScoreManager.Instance;
@@ -49,11 +49,6 @@ namespace InGame.Notes
 
             eatAction.performed += onEatPerformed;
             throwAction.performed += onThrowPerformed;
-        }
-
-        private void Start()
-        {
-            isColliding = false;
         }
 
         private void OnDestroy()
@@ -77,7 +72,7 @@ namespace InGame.Notes
                     break;
             }
             
-            if (!isColliding) return;
+            if (collidedObjects.Count <= 0) return;
             lastEvent.actionType = type;
             ProcessLastEvent();
             lastEvent.actionType = InputEvent.Type.None;
@@ -98,40 +93,46 @@ namespace InGame.Notes
                 return;
             }
             
-            collideObject = other.gameObject;
-            isColliding = true;
+            collidedObjects.Enqueue(other.gameObject);
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            if (!other.gameObject.CompareTag("DreamNote") && !other.gameObject.CompareTag("NightmareNote")) return;
-            scoreManager.score--;
-            scoreManager.health--;
-            isColliding = false;
+            if(collidedObjects.Count > 0)
+            {
+                collidedObjects.Dequeue();
+            }
         }
 
         private void ProcessLastEvent()
         {
-            transform.DOKill();
             switch (lastEvent.actionType)
             {
                 case InputEvent.Type.Eat:
                     if (isDream)
                     {
-                        scoreManager.score += 2;
-                        scoreManager.health++;
+                        scoreManager.score++;
+                    }
+                    else
+                    {
+                        scoreManager.health -= 4;
                     }
                     break;
                 case InputEvent.Type.Throw:
                     if (!isDream)
                     {
-                        scoreManager.score += 2;
-                        scoreManager.health++;
+                        scoreManager.score++;
+                    }
+                    else
+                    {
+                        scoreManager.health -= 4;
                     }
                     break;
             }
-
-            Destroy(collideObject);
+            
+            var obj = collidedObjects.Dequeue();
+            obj.transform.DOKill();
+            Destroy(obj);
         }
     }
 }

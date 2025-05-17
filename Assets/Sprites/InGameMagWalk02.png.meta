@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      InGameMagWalk02_0: -3294185766319466431
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
