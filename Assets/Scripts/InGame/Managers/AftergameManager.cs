@@ -43,7 +43,6 @@ namespace InGame.Managers
 
                 afterGameUIView.index = data.currentStage;
                 afterGameUIView.name = info.stageName;
-                afterGameUIView.description = info.stageDescription;
                 afterGameUIView.latestScore = data.latestScores[data.currentStage];
                 afterGameUIView.highestScore = data.highestScores[data.currentStage];
                 afterGameUIView.latestHealth = data.latestHealth[data.currentStage];

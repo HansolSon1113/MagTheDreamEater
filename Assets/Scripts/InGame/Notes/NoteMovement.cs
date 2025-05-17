@@ -16,7 +16,7 @@ namespace InGame.Notes
             transform.DOMove(endPoint.position, duration).SetEase(Ease.Linear).OnComplete(() =>
             {
                 scoreManager.score--;
-                scoreManager.health -= 4;
+                scoreManager.health -= 2;
                 Destroy(gameObject);
             });
         }

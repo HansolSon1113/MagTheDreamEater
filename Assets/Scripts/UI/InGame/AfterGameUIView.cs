@@ -5,7 +5,7 @@ namespace UI.InGame
 {
     public class AfterGameUIView : MonoBehaviour
     {
-        [SerializeField] private TMP_Text indexText, nameText, descriptionText, latestScoreText, highestScoreText, latestHealthText, highestHealthText;
+        [SerializeField] private TMP_Text indexText, nameText, latestScoreText, highestScoreText, latestHealthText, highestHealthText;
         
         public int index
         {
@@ -15,11 +15,6 @@ namespace UI.InGame
         public string name
         {
             set => nameText.text = value;
-        }
-
-        public string description
-        {
-            set => descriptionText.text = value;
         }
 
         public int latestScore

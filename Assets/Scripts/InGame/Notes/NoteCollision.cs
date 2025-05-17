@@ -115,7 +115,7 @@ namespace InGame.Notes
                     }
                     else
                     {
-                        scoreManager.health -= 4;
+                        scoreManager.health -= 2;
                     }
                     break;
                 case InputEvent.Type.Throw:
@@ -125,7 +125,7 @@ namespace InGame.Notes
                     }
                     else
                     {
-                        scoreManager.health -= 4;
+                        scoreManager.health -= 2;
                     }
                     break;
             }

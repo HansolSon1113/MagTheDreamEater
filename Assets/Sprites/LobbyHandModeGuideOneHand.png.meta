@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: cce31bebe89d94adaa7c61f7790c0427
+guid: 607bf53f6059c4702b9ec43fa47e3c91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 281195788480326122
-    second: StagesEEIdle01_0
+      213: 5636709210713541049
+    second: LobbyHandModeGuideOneHand_0
+  - first:
+      213: 1859485388212501727
+    second: LobbyHandModeGuideOneHand_1
+  - first:
+      213: 6735760987123437786
+    second: LobbyHandModeGuideOneHand_2
+  - first:
+      213: -1901523558758390787
+    second: LobbyHandModeGuideOneHand_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,23 +148,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StagesEEIdle01_0
+      name: LobbyHandModeGuideOneHand_0
       rect:
         serializedVersion: 2
-        x: 459
-        y: 236
-        width: 623
-        height: 700
-      alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+        x: 714
+        y: 815
+        width: 339
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae9a4bc641207e300800000000000000
-      internalID: 281195788480326122
+      spriteID: 9b9c0ce992d993e40800000000000000
+      internalID: 5636709210713541049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbyHandModeGuideOneHand_1
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 873
+        width: 482
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc7f6dcb183ec910800000000000000
+      internalID: 1859485388212501727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbyHandModeGuideOneHand_2
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 407
+        width: 340
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad05d612eea3a7d50800000000000000
+      internalID: 6735760987123437786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbyHandModeGuideOneHand_3
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 437
+        width: 580
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df36b24e56e6c95e0800000000000000
+      internalID: -1901523558758390787
       vertices: []
       indices: 
       edges: []
@@ -164,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3fe6b98da869440d89cda3a9cd280ff8
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      StagesEEIdle01_0: 281195788480326122
+      LobbyHandModeGuideOneHand_0: 5636709210713541049
+      LobbyHandModeGuideOneHand_1: 1859485388212501727
+      LobbyHandModeGuideOneHand_2: 6735760987123437786
+      LobbyHandModeGuideOneHand_3: -1901523558758390787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

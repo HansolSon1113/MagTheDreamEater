@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: cce31bebe89d94adaa7c61f7790c0427
+guid: 687e2157dc29747b08a7d2a29eef2642
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 281195788480326122
-    second: StagesEEIdle01_0
+      213: -4505195168698199942
+    second: LobbyMenuBtn_0
+  - first:
+      213: 4596819540816386044
+    second: LobbyMenuBtn_1
+  - first:
+      213: -121621837520461456
+    second: LobbyMenuBtn_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,23 +145,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StagesEEIdle01_0
+      name: LobbyMenuBtn_0
       rect:
         serializedVersion: 2
-        x: 459
-        y: 236
-        width: 623
-        height: 700
-      alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+        x: 1753
+        y: 836
+        width: 489
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae9a4bc641207e300800000000000000
-      internalID: 281195788480326122
+      spriteID: a7010f51dd45a71c0800000000000000
+      internalID: -4505195168698199942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbyMenuBtn_1
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 616
+        width: 489
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf75fe2740f2bcf30800000000000000
+      internalID: 4596819540816386044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbyMenuBtn_2
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 396
+        width: 489
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071a9a94599ef4ef0800000000000000
+      internalID: -121621837520461456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LobbyMenuBtn_3
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 176
+        width: 489
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15e132c9583846518fc9a3a3ea560c1
+      internalID: 101871379
       vertices: []
       indices: 
       edges: []
@@ -164,7 +236,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3fe6b98da869440d89cda3a9cd280ff8
+    spriteID: 3edef9c8039b84aba82d5fcd8d6bb0d4
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +246,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      StagesEEIdle01_0: 281195788480326122
+      LobbyMenuBtn_0: -4505195168698199942
+      LobbyMenuBtn_1: 4596819540816386044
+      LobbyMenuBtn_2: -121621837520461456
+      LobbyMenuBtn_3: 101871379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

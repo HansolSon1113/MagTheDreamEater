@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cce31bebe89d94adaa7c61f7790c0427
+guid: 79526bbd818a9447a9a49ae23e3b25e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 281195788480326122
-    second: StagesEEIdle01_0
+      213: 74397820462591388
+    second: LobbyTextr_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StagesEEIdle01_0
+      name: LobbyTextr_0
       rect:
         serializedVersion: 2
-        x: 459
-        y: 236
-        width: 623
-        height: 700
-      alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+        x: 510
+        y: 425
+        width: 1246
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae9a4bc641207e300800000000000000
-      internalID: 281195788480326122
+      spriteID: c9d6cbc6c60580100800000000000000
+      internalID: 74397820462591388
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3fe6b98da869440d89cda3a9cd280ff8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      StagesEEIdle01_0: 281195788480326122
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
